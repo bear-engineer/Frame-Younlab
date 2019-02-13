@@ -1,0 +1,9 @@
+$default-size-8-2: 16px;
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  padding: $default-size-8-2;
+  box-sizing: border-box;
+  margin: 0 auto;
+}

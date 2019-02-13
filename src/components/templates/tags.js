@@ -6,6 +6,7 @@ class Tag extends Component {
     const data = this.props.data.allMarkdownRemark.edges;
     return (
       <div>
+        {console.log(this.props.pathContext.tag)}
         {console.log(data.map(tag => tag.node.frontmatter.title))}
         <span />
       </div>
@@ -13,12 +14,7 @@ class Tag extends Component {
   }
 }
 export default Tag;
-// const Tag = ({ data }) => (
-//   <Layout>
-//     <div>{data.allMarkdownRemark.edges.map(tag => console.log(tag))}</div>
-//   </Layout>
-// );
-// export default Tag;
+
 export const query = graphql`
   query($tag: String) {
     allMarkdownRemark(
