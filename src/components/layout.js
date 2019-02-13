@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
+import SideBar from "./sideBar";
 import "./styles/layout.scss";
 
 const Layout = ({ children }) => (
@@ -12,13 +13,19 @@ const Layout = ({ children }) => (
             title
           }
         }
+        allMarkdownRemark {
+          group(field: frontmatter___tags) {
+            fieldValue
+            totalCount
+          }
+        }
       }
     `}
     render={data => (
       <div className="layout">
         <section className="layout-left-side-wrap">
           <aside className="layout-left-side-container">
-            <h2>sidebar</h2>
+            <SideBar data={data.allMarkdownRemark.group} />
           </aside>
         </section>
         <section className="layout-right-side-wrap">
