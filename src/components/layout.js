@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import SideBar from "./sideBar";
+import SideBar from "./container/sideBar";
 import "./styles/layout.scss";
 
 const Layout = ({ children }) => (
@@ -10,7 +10,8 @@ const Layout = ({ children }) => (
       query SiteTitleQuery {
         site {
           siteMetadata {
-            title
+            subFirstTitle
+            subLastTitle
           }
         }
         allMarkdownRemark {
@@ -25,7 +26,10 @@ const Layout = ({ children }) => (
       <div className="layout">
         <section className="layout-left-side-wrap">
           <aside className="layout-left-side-container">
-            <SideBar data={data.allMarkdownRemark.group} />
+            <SideBar
+              data={data.allMarkdownRemark.group}
+              title={data.site.siteMetadata}
+            />
           </aside>
         </section>
         <section className="layout-right-side-wrap">

@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from "gatsby";
 import kebabCase from "lodash/kebabCase";
-import "./styles/sideBar.scss";
-export default ({ data }) => (
+import "../styles/sideBar.scss";
+export default ({ data, title }) => (
   <nav className="side-bar">
-    <h1 className="side-bar-title">
-      Younlab <span>Frame</span>
-    </h1>
+    <Link to="/">
+      <h1 className="side-bar-title">
+        {title.subFirstTitle} <span>{title.subLastTitle}</span>
+      </h1>
+    </Link>
+
     <form
       action=""
       className="side-bar-search"
@@ -16,20 +20,20 @@ export default ({ data }) => (
     <ul className="side-bar-menu">
       <h2 className="side-bar-menu-title">Menu</h2>
       <li>
-        <a href="/">Home</a>
+        <Link to="/">home</Link>
       </li>
       <li>
-        <a href="/about">About</a>
+        <Link to="/about">about</Link>
       </li>
     </ul>
     <ul className="side-bar-menu side-bar-menu-tag">
       <h2 className="side-bar-menu-title">Tags</h2>
       {data.map(tag => (
         <li key={tag.fieldValue}>
-          <a href={`tags/${kebabCase(tag.fieldValue)}`}>
+          <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
             {tag.fieldValue}
             <span>{tag.totalCount}</span>
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

@@ -1,15 +1,15 @@
 import { graphql } from "gatsby";
 import React, { Component } from "react";
-
+import Layout from "../layout";
 class Tag extends Component {
   render() {
     const data = this.props.data.allMarkdownRemark.edges;
     return (
-      <div>
+      <Layout>
         {console.log(this.props.pathContext.tag)}
         {console.log(data.map(tag => tag.node.frontmatter.title))}
         <span />
-      </div>
+      </Layout>
     );
   }
 }

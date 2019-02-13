@@ -1,6 +1,7 @@
 ---
 title: File storage backend
 date: 2019-02-12
+description: python 에 적용되는 알고리즘에 대하여
 tags: ["django", "python"]
 ---
 

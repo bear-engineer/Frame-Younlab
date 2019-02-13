@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Frame Younlab`,
+    title: `Younlab Frame`,
+    subFirstTitle: `Younlab`,
+    subLastTitle: `Frame`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@Sehyeon Youn`
   },
