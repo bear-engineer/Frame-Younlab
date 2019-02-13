@@ -1,6 +1,7 @@
 @import "./config/_variables";
 
 .layout {
+  width: 100%;
   &-left-side-wrap {
     position: absolute;
     left: 0;
@@ -9,7 +10,7 @@
     height: 100%;
     overflow-y: scroll;
     box-sizing: border-box;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid $light-violet;
     @include breakpoint(tablet) {
       width: 80%;
       left: -80%;
@@ -28,9 +29,12 @@
     width: 80%;
     height: 100%;
     overflow-y: scroll;
+    padding-top: 16px;
+    box-sizing: border-box;
     @include breakpoint(tablet) {
       width: 100%;
       left: 0;
+      padding-left: 24px;
     }
   }
   &-layout-content-wrap {

@@ -1,0 +1,91 @@
+@import "../styles/config/variables";
+
+.post-object {
+  height: 145px;
+  margin-bottom: 16px;
+  @include breakpoint(tablet) {
+    height: auto;
+  }
+  &-left {
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 8px;
+    height: 100%;
+    @include breakpoint(tablet) {
+      width: 25%;
+    }
+    @include breakpoint(mobileonly) {
+      float: none;
+      width: 100%;
+      padding-bottom: 0;
+    }
+  }
+  &-right {
+    float: left;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 8px;
+    position: relative;
+    height: 100%;
+    @include breakpoint(tablet) {
+      width: 75%;
+    }
+    @include breakpoint(mobileonly) {
+      float: none;
+      width: 100%;
+      padding-top: 0;
+    }
+  }
+  &-date {
+    display: block;
+    font-size: 3.5em;
+    font-weight: bold;
+    @include breakpoint(mobileonly) {
+      font-size: 1em;
+      height: 1em;
+    }
+  }
+  &-title {
+    font-size: 1.3em;
+    margin: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+  }
+  &-description {
+    font-size: 0.9em;
+    font-weight: 200;
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+    @include breakpoint(tablet) {
+      margin-bottom: 4em;
+    }
+    @include breakpoint(mobileonly) {
+      margin-bottom: 2em;
+    }
+  }
+  &-tag {
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+
+    span {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 4px 8px;
+      background: $light-violet;
+      border-radius: 3px;
+      margin-right: 8px;
+      font-size: 0.8em;
+      a {
+        color: $strong-violet;
+      }
+    }
+  }
+}
+.post-object::after {
+  content: "";
+  height: 0;
+  display: block;
+  clear: both;
+}

@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 const IndexPage = ({ data }) => (
   <Layout>
     <section>
+      {console.log(data)}
       {data.allMarkdownRemark.edges.map(post => (
         <Post
           title={post.node.frontmatter.title}
@@ -25,11 +26,6 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    site {
-      siteMetadata {
-        author
-      }
-    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       group(field: frontmatter___tags) {
         fieldValue

@@ -3,7 +3,11 @@ import Layout from "../layout";
 import { graphql } from "gatsby";
 const Posts = ({ data }) => (
   <Layout>
-    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    <div>
+      <h2>{data.markdownRemark.frontmatter.title}</h2>
+      <p>{data.markdownRemark.frontmatter.date}</p>
+    </div>
+    <section dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
   </Layout>
 );
 
