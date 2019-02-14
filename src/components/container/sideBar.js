@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import kebabCase from "lodash/kebabCase";
 import "../styles/sideBar.scss";
-export default ({ data, title }) => (
+export default ({ data, title, github }) => (
   <nav className="side-bar">
     <Link to="/">
       <h1 className="side-bar-title">
@@ -23,7 +23,7 @@ export default ({ data, title }) => (
         <Link to="/">home</Link>
       </li>
       <li>
-        <Link to="/about">about</Link>
+        <a href={github}>github</a>
       </li>
     </ul>
     <ul className="side-bar-menu side-bar-menu-tag">

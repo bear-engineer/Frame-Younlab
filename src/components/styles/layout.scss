@@ -11,9 +11,16 @@
     overflow-y: scroll;
     box-sizing: border-box;
     border-right: 1px solid $light-violet;
+    background: #fdfdfd;
+    z-index: 10;
     @include breakpoint(tablet) {
       width: 80%;
       left: -80%;
+    }
+  }
+  &-left-side-wrap .left-active {
+    @include breakpoint(tablet) {
+      left: 0;
     }
   }
   &-left-side-container {
@@ -35,6 +42,11 @@
       width: 100%;
       left: 0;
       padding-left: 24px;
+    }
+  }
+  &-right-side-wrap .right-active {
+    @include breakpoint(tablet) {
+      left: 80%;
     }
   }
   &-layout-content-wrap {

@@ -12,6 +12,7 @@ const Layout = ({ children }) => (
           siteMetadata {
             subFirstTitle
             subLastTitle
+            github
           }
         }
         allMarkdownRemark {
@@ -29,6 +30,7 @@ const Layout = ({ children }) => (
             <SideBar
               data={data.allMarkdownRemark.group}
               title={data.site.siteMetadata}
+              github={data.site.siteMetadata.github}
             />
           </aside>
         </section>

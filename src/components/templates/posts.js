@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../layout";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import "./posts.scss";
 const Posts = ({ data }) => (
   <Layout>
@@ -14,6 +14,13 @@ const Posts = ({ data }) => (
           className="markdown-body"
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
+      </section>
+      <section className="posts-tags">
+        {data.markdownRemark.frontmatter.tags.map(tag => (
+          <Link to={`/tags/${tag}`} key={tag}>
+            <span className="tag">{tag}</span>
+          </Link>
+        ))}
       </section>
     </section>
   </Layout>
