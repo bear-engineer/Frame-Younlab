@@ -14,7 +14,7 @@
     border-right: 1px solid $light-violet;
     background: #fdfdfd;
     z-index: 10;
-    transition: all 0.2s ease-out;
+    transition: all 0.4s ease-out;
     @include breakpoint(tablet) {
       width: 80%;
       left: -80%;
@@ -35,7 +35,7 @@
     overflow-y: scroll;
     padding-top: 16px;
     box-sizing: border-box;
-    transition: all 0.2s ease-out;
+    transition: all 0.4s ease-out;
     @include breakpoint(tablet) {
       width: 100%;
       left: 0;
