@@ -5,8 +5,6 @@ description: Modules Javascript 모듈화 방법과 vuejs 에서의 사용법
 tags: ["js", "vuejs"]
 ---
 
-# Modules Javascript 모듈화 방법
-
 - 자바스크립트 모듈 로더 라이브러리(AMD, Commons JS)기능을 js 언어 자체에서 지원한다.
 - 호출되기 전까지는 코드 실행과 동작을 하지 않는 특징이 있다.
 

@@ -5,8 +5,6 @@ description: "HTTP요청수신/응답송신 (프로토콜: HTTP) -> 동적인 �
 tags: ["django"]
 ---
 
-## WebServer + WSGI + Application 관계도
-
 ### WebServer (Nginx)
 
 - HTTP요청수신/응답송신 (프로토콜: HTTP) -> 동적인 처리가 필요하면 Django로 넘겨야 하므로 WSGI사용

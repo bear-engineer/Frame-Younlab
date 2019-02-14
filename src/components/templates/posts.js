@@ -1,13 +1,21 @@
 import React from "react";
 import Layout from "../layout";
 import { graphql } from "gatsby";
+import "./posts.scss";
 const Posts = ({ data }) => (
   <Layout>
-    <div>
-      <h2>{data.markdownRemark.frontmatter.title}</h2>
-      <p>{data.markdownRemark.frontmatter.date}</p>
-    </div>
-    <section dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    <section className="posts">
+      <div className="posts-title">
+        <h1>{data.markdownRemark.frontmatter.title}</h1>
+        <p>{data.markdownRemark.frontmatter.date}</p>
+      </div>
+      <section className="markdown">
+        <article
+          className="markdown-body"
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        />
+      </section>
+    </section>
   </Layout>
 );
 

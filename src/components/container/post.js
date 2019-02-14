@@ -34,7 +34,7 @@ const Post = ({ title, description, tags, date, slug, pageKey }) => (
       </Link>
       <div className="post-object-tag">
         {tags.map(tag => (
-          <span key={`${pageKey}-${tag}`}>
+          <span className="tag" key={`${pageKey}-${tag}`}>
             <Link to={`/tags/${kebabCase(tag)}`}>{tag}</Link>
           </span>
         ))}

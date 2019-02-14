@@ -28,6 +28,12 @@
     padding: 8px;
     position: relative;
     height: 100%;
+    a {
+      transition: all 0.2s ease-in-out;
+    }
+    a:hover {
+      color: $strong-violet;
+    }
     @include breakpoint(tablet) {
       width: 75%;
     }
@@ -68,21 +74,9 @@
     position: absolute;
     bottom: 0;
     left: 8px;
-
-    span {
-      display: inline-block;
-      box-sizing: border-box;
-      padding: 4px 8px;
-      background: $light-violet;
-      border-radius: 3px;
-      margin-right: 8px;
-      font-size: 0.8em;
-      a {
-        color: $strong-violet;
-      }
-    }
   }
 }
+
 .post-object::after {
   content: "";
   height: 0;

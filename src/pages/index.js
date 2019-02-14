@@ -7,7 +7,6 @@ import Layout from "../components/layout";
 const IndexPage = ({ data }) => (
   <Layout>
     <section>
-      {console.log(data)}
       {data.allMarkdownRemark.edges.map(post => (
         <Post
           title={post.node.frontmatter.title}

@@ -26,3 +26,16 @@ a:active,
 a:link {
   color: $default-gray;
 }
+
+.tag {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  background: $light-violet;
+  border-radius: 3px;
+  margin-right: 8px;
+  font-size: 0.8em;
+  a {
+    color: $strong-violet;
+  }
+}
