@@ -9,18 +9,15 @@
     width: 30%;
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
     box-sizing: border-box;
     border-right: 1px solid $light-violet;
     background: #fdfdfd;
     z-index: 10;
+    transition: all 0.2s ease-out;
     @include breakpoint(tablet) {
       width: 80%;
       left: -80%;
-    }
-  }
-  &-left-side-wrap .left-active {
-    @include breakpoint(tablet) {
-      left: 0;
     }
   }
   &-left-side-container {
@@ -38,15 +35,11 @@
     overflow-y: scroll;
     padding-top: 16px;
     box-sizing: border-box;
+    transition: all 0.2s ease-out;
     @include breakpoint(tablet) {
       width: 100%;
       left: 0;
       padding-left: 24px;
-    }
-  }
-  &-right-side-wrap .right-active {
-    @include breakpoint(tablet) {
-      left: 80%;
     }
   }
   &-layout-content-wrap {
@@ -58,5 +51,38 @@
     display: block;
     height: 0;
     clear: both;
+  }
+  .right-active {
+    @include breakpoint(tablet) {
+      left: 80%;
+    }
+  }
+  .left-active {
+    @include breakpoint(tablet) {
+      left: 0;
+    }
+  }
+  .arrow-active {
+    transform: rotate(180deg);
+  }
+  &-menu-btn {
+    display: none;
+    width: 26px;
+    height: 32px;
+    border-radius: 0 16px 16px 0;
+    position: absolute;
+    line-height: 32px;
+    text-align: center;
+    left: 0;
+    top: 56px;
+    z-index: 20;
+    background: $strong-violet;
+    color: $light-violet;
+    @include breakpoint(tablet) {
+      display: block;
+    }
+    &-arrow {
+      transition: all 0.5s ease-out;
+    }
   }
 }

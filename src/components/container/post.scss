@@ -6,6 +6,9 @@
   @include breakpoint(tablet) {
     height: auto;
   }
+  @include breakpoint(mobileonly) {
+    margin-top: 14px;
+  }
   &-left {
     float: left;
     width: 20%;
