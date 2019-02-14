@@ -1,0 +1,5 @@
+# Redirect domain aliases to primary domain
+http://younlab.com/* http://younlab.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+http://boring-sammet-4c606a.netlify.com/* http://younlab.com/:splat 301!
