@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import kebabCase from "lodash/kebabCase";
 import "../styles/sideBar.scss";
+import Search from "../container/search";
 export default ({ data, title, github }) => (
   <nav className="side-bar">
     <Link to="/">
@@ -10,13 +11,8 @@ export default ({ data, title, github }) => (
       </h1>
     </Link>
 
-    <form
-      action=""
-      className="side-bar-search"
-      onSubmit={e => e.preventDefault()}
-    >
-      <input type="text" placeholder="Search Document" />
-    </form>
+    <Search className="side-bar-search" />
+
     <ul className="side-bar-menu">
       <h2 className="side-bar-menu-title">Menu</h2>
       <li>

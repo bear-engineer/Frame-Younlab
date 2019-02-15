@@ -1,3 +1,38 @@
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
+const myQuery = `{
+  allMarkdownRemark{
+    edges{
+      node{
+        id
+        frontmatter{
+          title
+          description
+          date
+          tags
+        }
+        fields{
+          slug
+        }
+      }
+    }
+  }
+}`;
+
+const queries = [
+  {
+    query: myQuery,
+    transformer: ({ data }) =>
+      data.allMarkdownRemark.edges.map(({ node }) => node), // optional
+    indexName: "index name to target", // overrides main index name, optional
+    settings: {
+      // optional, any index settings
+    }
+  }
+];
+
 module.exports = {
   siteMetadata: {
     title: `Younlab Frame`,
@@ -50,9 +85,19 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/younlab-frame-icon.png` // This path is relative to the root of the site.
       }
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME, // for all queries
+        queries,
+        chunkSize: 10000 // default: 1000
+      }
+    }
   ]
 };

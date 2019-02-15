@@ -16,35 +16,6 @@
       font-weight: 200;
     }
   }
-  &-search {
-    padding-bottom: $default-size-8-2;
-    input {
-      display: block;
-      padding: 6px $default-size-8-2;
-      box-sizing: border-box;
-      width: 68%;
-      border: unset;
-      border: 1px solid #b197fc;
-      color: $strong-violet;
-      border-radius: 3px;
-      outline: none;
-      font-size: 14px;
-      transition: all 0.2s ease-in-out;
-    }
-    ::placeholder {
-      color: $light-violet;
-      font-weight: 400;
-      opacity: 1; /* Firefox */
-    }
-    :-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
-      font-weight: 400;
-      color: $light-violet;
-    }
-    input:focus {
-      border: 1px solid $strong-violet;
-    }
-  }
   &-menu {
     list-style: none;
     padding: 0;
