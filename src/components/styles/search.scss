@@ -1,0 +1,56 @@
+@import "./config/_variables";
+
+.search {
+  padding-bottom: $default-size-8-2;
+  position: relative;
+  input {
+    display: block;
+    padding: 6px $default-size-8-2;
+    box-sizing: border-box;
+    width: 68%;
+    border: unset;
+    border: 1px solid #b197fc;
+    color: $strong-violet;
+    border-radius: 3px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+  }
+  ::placeholder {
+    color: $light-violet;
+    font-weight: 400;
+    opacity: 1; /* Firefox */
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-weight: 400;
+    color: $light-violet;
+  }
+  input:focus {
+    width: 100%;
+    border: 1px solid $strong-violet;
+  }
+  .ais-SearchBox-submit,
+  .ais-SearchBox-reset {
+    display: none;
+  }
+  .react-autosuggest__suggestions-container {
+    position: absolute;
+    width: 100%;
+    top: 47px;
+    left: 0;
+    background: #fff;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    height: auto;
+    border-radius: 3px;
+    ul {
+      list-style: none;
+      padding: 16px;
+    }
+  }
+}
+
+.search-result {
+  //   display: none;
+}

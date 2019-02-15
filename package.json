@@ -5,8 +5,11 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "algoliasearch": "^3.32.0",
+    "dotenv": "^6.2.0",
     "gatsby": "^2.0.119",
     "gatsby-image": "^2.0.29",
+    "gatsby-plugin-algolia": "^0.3.0",
     "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-offline": "^2.0.23",
     "gatsby-plugin-react-helmet": "^3.0.6",
@@ -21,8 +24,10 @@
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.1",
     "react": "^16.8.1",
+    "react-autosuggest": "^9.4.3",
     "react-dom": "^16.8.1",
     "react-helmet": "^5.2.0",
+    "react-instantsearch-dom": "^5.4.0",
     "react-lines-ellipsis": "^0.14.0"
   },
   "keywords": [
