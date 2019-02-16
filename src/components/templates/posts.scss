@@ -1,6 +1,10 @@
 @import "../styles/config/_variables";
 @import "../styles/config/_markdownSyntax";
 .posts {
+  padding: 0 16px;
+  @include breakpoint(tablat) {
+    padding: 0;
+  }
   &-title {
     padding-top: 16px;
     padding-bottom: 32px;
