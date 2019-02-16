@@ -1,16 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import algoliasearch from "algoliasearch/lite";
-import {
-  InstantSearch,
-  Configure,
-  Hits,
-  Highlight,
-  connectSearchBox
-} from "react-instantsearch-dom";
+import { InstantSearch, Configure, Highlight } from "react-instantsearch-dom";
 import Autocomplete from "./autoSearch";
 
-const VirtalSearchBox = connectSearchBox(() => null);
+// const VirtalSearchBox = connectSearchBox(() => null);
 
 const searchClient = algoliasearch(
   "6FDIKBQUQF",
