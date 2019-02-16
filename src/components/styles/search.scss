@@ -15,6 +15,9 @@
     outline: none;
     font-size: 14px;
     transition: all 0.2s ease-in-out;
+    @include breakpoint(mobileonly) {
+      width: 100%;
+    }
   }
   ::placeholder {
     color: $light-violet;
@@ -44,13 +47,25 @@
     font-size: 0.8em;
     height: auto;
     border-radius: 3px;
+    -webkit-box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.3);
+
     ul {
       list-style: none;
-      padding: 16px;
+      padding: 0 16px 16px 16px;
     }
   }
 }
 
-.search-result {
-  //   display: none;
+.search-object {
+  &-title {
+    font-size: 1.2em;
+    h4 {
+      margin-bottom: 8px;
+    }
+  }
+  &-description {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
 }

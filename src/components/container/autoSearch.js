@@ -43,9 +43,9 @@ class AutoComplete extends Component {
   renderSuggestion(hit) {
     console.log(hit);
     return (
-      <div>
+      <div className="search-object">
         <Link to={hit.fields.slug}>
-          <div>
+          <div className="search-object-title">
             <h4>
               <Highlight
                 attribute="frontmatter.title"
@@ -54,7 +54,7 @@ class AutoComplete extends Component {
               />
             </h4>
           </div>
-          <div>
+          <div className="search-object-description">
             <Highlight
               attribute="frontmatter.description"
               hit={hit}
