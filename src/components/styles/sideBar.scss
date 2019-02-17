@@ -3,6 +3,7 @@
 .side-bar {
   width: 250px;
   float: right;
+  overflow-x: hidden;
   @include breakpoint(tablet) {
     width: 80%;
     float: none;

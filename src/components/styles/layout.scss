@@ -69,6 +69,9 @@
   .arrow-active {
     transform: rotate(180deg);
   }
+  .menu-btn-active {
+    left: 80%;
+  }
   &-menu-btn {
     display: none;
     width: 26px;
@@ -79,9 +82,10 @@
     text-align: center;
     left: 0;
     top: 56px;
-    z-index: 20;
+    z-index: 100;
     background: $strong-violet;
     color: $light-violet;
+    transition: all 0.4s ease-out;
     @include breakpoint(tablet) {
       display: block;
     }
