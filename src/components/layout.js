@@ -59,11 +59,11 @@ class Layout extends Component {
                   github={data.site.siteMetadata.github}
                 />
               </aside>
+            </section>
+            <section className="layout-right-side-wrap">
               <div className="layout-menu-btn" onClick={e => this.menu(e)}>
                 <div className="layout-menu-btn-arrow">▶</div>
               </div>
-            </section>
-            <section className="layout-right-side-wrap">
               <main className="container layout-content-wrap">
                 {this.props.children}
               </main>
@@ -74,47 +74,6 @@ class Layout extends Component {
     );
   }
 }
-
-// const Layout = ({ children }) => (
-//   <StaticQuery
-//     query={graphql`
-//       query SiteTitleQuery {
-//         site {
-//           siteMetadata {
-//             subFirstTitle
-//             subLastTitle
-//             github
-//           }
-//         }
-//         allMarkdownRemark {
-//           group(field: frontmatter___tags) {
-//             fieldValue
-//             totalCount
-//           }
-//         }
-//       }
-//     `}
-//     render={data => (
-//       <div className="layout">
-//         <section className="layout-left-side-wrap" style={sideBarHeight()}>
-//           <aside className="layout-left-side-container">
-//             <SideBar
-//               data={data.allMarkdownRemark.group}
-//               title={data.site.siteMetadata}
-//               github={data.site.siteMetadata.github}
-//             />
-//           </aside>
-//         </section>
-//         <section className="layout-right-side-wrap">
-//           <div className="layout-menu-btn" onClick={e => menu(e)}>
-//             <div className="layout-menu-btn-arrow">▶</div>
-//           </div>
-//           <main className="container layout-content-wrap">{children}</main>
-//         </section>
-//       </div>
-//     )}
-//   />
-// );
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
