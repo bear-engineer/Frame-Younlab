@@ -17,10 +17,26 @@
       font-size: 0.9em;
     }
   }
-  .fb-comments {
-    padding-top: 32px;
-    div > div {
-      padding: 0;
+  &-facebook {
+    margin-top: 32px;
+  }
+  &-facebook-share {
+    border: none;
+    background: #3b5998;
+    padding: 4px 8px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #fff;
+    margin-left: 8px;
+    font-size: 0.8em;
+    cursor: pointer;
+    vertical-align: middle;
+    span {
+      padding-right: 8px;
+      vertical-align: middle;
+      line-height: 1.5;
+      font-size: 1em;
+      display: inline-block;
     }
   }
 }

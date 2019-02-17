@@ -1,10 +1,14 @@
 import React from "react";
 import Layout from "../layout";
 import { Link, graphql } from "gatsby";
-import { FacebookProvider, Comments } from "react-facebook";
+import { FacebookProvider, Comments, ShareButton } from "react-facebook";
 import { Helmet } from "react-helmet";
 import "./posts.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+
 import urljoin from "url-join";
+
 const Posts = ({ data }) => {
   const pageUrl = urljoin(
     data.site.siteMetadata.baseUrl,
@@ -40,12 +44,17 @@ const Posts = ({ data }) => {
             </Link>
           ))}
         </section>
-        <FacebookProvider
-          className="posts-facebook"
-          appId={data.site.siteMetadata.facebookAppId}
-        >
-          <Comments href={pageUrl} width={`100%`} />
-        </FacebookProvider>
+        <section className="posts-facebook">
+          <FacebookProvider appId={data.site.siteMetadata.facebookAppId}>
+            <ShareButton href={pageUrl} className="posts-facebook-share">
+              <span>
+                <FontAwesomeIcon icon={faFacebookF} />
+              </span>
+              <span>Share</span>
+            </ShareButton>
+            <Comments href={pageUrl} width={`100%`} />
+          </FacebookProvider>
+        </section>
       </section>
     </Layout>
   );
