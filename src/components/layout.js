@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import SideBar from "./container/sideBar";
@@ -12,53 +12,107 @@ const menu = e => {
   rightSideContent.classList.toggle("right-active");
   menuBtnArrow.classList.toggle("arrow-active");
 };
-const sideBarHeight = () => {
-  const windowHeight = window.innerHeight;
-  console.log(windowHeight);
-  // const target = document.querySelector(".layout-left-side-wrap");
-  return { height: windowHeight };
-};
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            subFirstTitle
-            subLastTitle
-            github
+class Layout extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { height: props.height };
+  }
+  componentWillMount() {
+    this.setState({ height: window.innerHeight + "px" });
+  }
+  sideBarHeight() {
+    return { height: this.state.height };
+  }
+  render() {
+    return (
+      <StaticQuery
+        query={graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                subFirstTitle
+                subLastTitle
+                github
+              }
+            }
+            allMarkdownRemark {
+              group(field: frontmatter___tags) {
+                fieldValue
+                totalCount
+              }
+            }
           }
-        }
-        allMarkdownRemark {
-          group(field: frontmatter___tags) {
-            fieldValue
-            totalCount
-          }
-        }
-      }
-    `}
-    render={data => (
-      <div className="layout">
-        <section className="layout-left-side-wrap" style={sideBarHeight()}>
-          <aside className="layout-left-side-container">
-            <SideBar
-              data={data.allMarkdownRemark.group}
-              title={data.site.siteMetadata}
-              github={data.site.siteMetadata.github}
-            />
-          </aside>
-        </section>
-        <section className="layout-right-side-wrap">
-          <div className="layout-menu-btn" onClick={e => menu(e)}>
-            <div className="layout-menu-btn-arrow">▶</div>
+        `}
+        render={data => (
+          <div className="layout">
+            <section
+              className="layout-left-side-wrap"
+              style={this.sideBarHeight()}
+            >
+              <aside className="layout-left-side-container">
+                <SideBar
+                  data={data.allMarkdownRemark.group}
+                  title={data.site.siteMetadata}
+                  github={data.site.siteMetadata.github}
+                />
+              </aside>
+            </section>
+            <section className="layout-right-side-wrap">
+              <div className="layout-menu-btn" onClick={e => menu(e)}>
+                <div className="layout-menu-btn-arrow">▶</div>
+              </div>
+              <main className="container layout-content-wrap">
+                {this.props.children}
+              </main>
+            </section>
           </div>
-          <main className="container layout-content-wrap">{children}</main>
-        </section>
-      </div>
-    )}
-  />
-);
+        )}
+      />
+    );
+  }
+}
+
+// const Layout = ({ children }) => (
+//   <StaticQuery
+//     query={graphql`
+//       query SiteTitleQuery {
+//         site {
+//           siteMetadata {
+//             subFirstTitle
+//             subLastTitle
+//             github
+//           }
+//         }
+//         allMarkdownRemark {
+//           group(field: frontmatter___tags) {
+//             fieldValue
+//             totalCount
+//           }
+//         }
+//       }
+//     `}
+//     render={data => (
+//       <div className="layout">
+//         <section className="layout-left-side-wrap" style={sideBarHeight()}>
+//           <aside className="layout-left-side-container">
+//             <SideBar
+//               data={data.allMarkdownRemark.group}
+//               title={data.site.siteMetadata}
+//               github={data.site.siteMetadata.github}
+//             />
+//           </aside>
+//         </section>
+//         <section className="layout-right-side-wrap">
+//           <div className="layout-menu-btn" onClick={e => menu(e)}>
+//             <div className="layout-menu-btn-arrow">▶</div>
+//           </div>
+//           <main className="container layout-content-wrap">{children}</main>
+//         </section>
+//       </div>
+//     )}
+//   />
+// );
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
