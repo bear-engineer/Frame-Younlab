@@ -1,11 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Post from "../components/container/post";
-
+import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <Helmet>
+      <title>{data.site.siteMetadata.title} | Home</title>
+    </Helmet>
     <section>
       {data.allMarkdownRemark.edges.map(post => (
         <Post
@@ -25,6 +28,11 @@ export default IndexPage;
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       group(field: frontmatter___tags) {
         fieldValue
