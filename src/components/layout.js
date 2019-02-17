@@ -14,8 +14,8 @@ const menu = e => {
 };
 const sideBarHeight = () => {
   const windowHeight = window.innerHeight;
-  const target = document.querySelector(".layout-left-side-wrap");
-  target.innerHeight = windowHeight;
+  // const target = document.querySelector(".layout-left-side-wrap");
+  return { height: windowHeight };
 };
 
 const Layout = ({ children }) => (
@@ -39,8 +39,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <div className="layout">
-        {sideBarHeight()}
-        <section className="layout-left-side-wrap">
+        <section className="layout-left-side-wrap" style={sideBarHeight()}>
           <aside className="layout-left-side-container">
             <SideBar
               data={data.allMarkdownRemark.group}
