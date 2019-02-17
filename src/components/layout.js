@@ -18,7 +18,7 @@ class Layout extends Component {
     super(props);
     this.state = { height: props.height };
   }
-  componentWillMount() {
+  componentDidMount() {
     this.setState({ height: window.innerHeight + "px" });
   }
   sideBarHeight() {
