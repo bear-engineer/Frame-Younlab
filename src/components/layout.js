@@ -14,6 +14,7 @@ const menu = e => {
 };
 const sideBarHeight = () => {
   const windowHeight = window.innerHeight;
+  console.log(windowHeight);
   // const target = document.querySelector(".layout-left-side-wrap");
   return { height: windowHeight };
 };
