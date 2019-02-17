@@ -30,7 +30,7 @@ class Search extends Component {
   };
 
   render() {
-    const { query } = this.state;
+    // const { query } = this.state;
 
     return (
       <div>

@@ -40,7 +40,9 @@ module.exports = {
     subLastTitle: `Frame`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@Sehyeon Youn`,
-    github: `https://github.com/Younlab`
+    github: `https://github.com/Younlab`,
+    facebookAppId: process.env.FACEBOOK_APP_ID,
+    baseUrl: `https://younlab.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
