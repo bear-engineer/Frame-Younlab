@@ -12,6 +12,12 @@ const menu = e => {
   rightSideContent.classList.toggle("right-active");
   menuBtnArrow.classList.toggle("arrow-active");
 };
+const sideBarHeight = () => {
+  const windowHeight = window.innerHeight;
+  const target = document.querySelector(".layout-left-side-wrap");
+  target.innerHeight = windowHeight;
+};
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -33,6 +39,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <div className="layout">
+        {sideBarHeight()}
         <section className="layout-left-side-wrap">
           <aside className="layout-left-side-container">
             <SideBar
