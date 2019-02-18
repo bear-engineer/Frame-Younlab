@@ -26,7 +26,7 @@ const queries = [
     query: myQuery,
     transformer: ({ data }) =>
       data.allMarkdownRemark.edges.map(({ node }) => node), // optional
-    indexName: "index name to target", // overrides main index name, optional
+    indexName: "younlab-query", // overrides main index name, optional
     settings: {
       // optional, any index settings
     }
