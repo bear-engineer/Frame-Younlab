@@ -1,36 +1,36 @@
 @import "../styles/config/_variables";
 
 .pagenation {
-  padding: 16px 8px;
+  // padding: 16px 8px;
   ul {
     list-style: none;
     padding: 0;
     a {
       display: block;
       padding: 8px 12px;
-    }
-    li {
-      float: left;
-      box-sizing: border-box;
-
-      margin: 0 4px;
       -webkit-box-shadow: 0px 2px 32px -10px rgba(0, 0, 0, 0.5);
       box-shadow: 0px 2px 32px -10px rgba(0, 0, 0, 0.5);
       background: #fff;
       line-height: 1;
       border-radius: 3px;
       transition: all 0.2s ease-in-out;
+    }
+    li {
+      float: left;
+      box-sizing: border-box;
+      padding: 4px;
+      margin-bottom: 4px;
       display: block;
     }
     li:hover {
-      background: $light-violet;
       a {
         color: $strong-violet;
+        background: $light-violet;
       }
     }
 
     li:nth-of-type(1) {
-      margin: 0 4px 0 0;
+      // margin: 0 4px 0 0;
     }
   }
   ul::after {
@@ -40,9 +40,9 @@
     clear: both;
   }
   .num-object-active {
-    background: $light-violet;
     a {
       color: $strong-violet;
+      background: $light-violet;
     }
   }
 }
