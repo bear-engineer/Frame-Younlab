@@ -48,6 +48,18 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {},
+        allPageHeaders: [],
+        mergeSecurityHeaders: true,
+        mergeLinkHeaders: true,
+        mergeCachingHeaders: true,
+        transformHeaders: (headers, path) => headers,
+        generateMatchPathRewrites: true
+      }
+    },
+    {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: `https://www.younlab.com`,
