@@ -4,6 +4,7 @@ import Layout from "../layout";
 
 class PostList extends Component {
   render() {
+    const posts = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
         {posts.map(({ node }) => {

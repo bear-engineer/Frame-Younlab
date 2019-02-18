@@ -1,7 +1,8 @@
 const path = require(`path`);
-const _ = require(`lodash`);
+const lodash = require(`lodash`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const postTemplate = path.resolve(`./src/components/templates/posts.js`);
+const postListTemplate = path.resolve(`./src/components/templates/postList.js`);
 const tagTemplate = path.resolve(`./src/components/templates/tags.js`);
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -20,7 +21,10 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+      ) {
         edges {
           node {
             frontmatter {
@@ -40,6 +44,23 @@ exports.createPages = ({ graphql, actions }) => {
     .then(result => {
       const posts = result.data.allMarkdownRemark.edges;
       const tags = result.data.allMarkdownRemark.group;
+      const postsPerPage = 6;
+      const numPages = Math.ceil(posts.length / postsPerPage);
+
+      // Create post list
+      Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+          component: postListTemplate,
+          context: {
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages,
+            currentPage: i + 1
+          }
+        });
+      });
+
       // create post
       posts.forEach(({ node }) => {
         createPage({
@@ -54,7 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
       // create tag
       tags.forEach(tag => {
         createPage({
-          path: `/tags/${_.kebabCase(tag.fieldValue)}`,
+          path: `/tags/${lodash.kebabCase(tag.fieldValue)}`,
           component: tagTemplate,
           context: {
             tag: tag.fieldValue
