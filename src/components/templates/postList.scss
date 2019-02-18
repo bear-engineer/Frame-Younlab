@@ -5,10 +5,14 @@
   ul {
     list-style: none;
     padding: 0;
+    a {
+      display: block;
+      padding: 8px 12px;
+    }
     li {
       float: left;
       box-sizing: border-box;
-      padding: 8px 12px;
+
       margin: 0 4px;
       -webkit-box-shadow: 0px 2px 32px -10px rgba(0, 0, 0, 0.5);
       box-shadow: 0px 2px 32px -10px rgba(0, 0, 0, 0.5);
@@ -16,6 +20,7 @@
       line-height: 1;
       border-radius: 3px;
       transition: all 0.2s ease-in-out;
+      display: block;
     }
     li:hover {
       background: $light-violet;
@@ -23,9 +28,7 @@
         color: $strong-violet;
       }
     }
-    li > a {
-      display: block;
-    }
+
     li:nth-of-type(1) {
       margin: 0 4px 0 0;
     }
