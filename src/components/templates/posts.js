@@ -24,6 +24,10 @@ const Posts = ({ data }) => {
           property="fb:app_id"
           content={data.site.siteMetadata.facebookAppId}
         />
+        <meta
+          name="description"
+          content={data.markdownRemark.frontmatter.description}
+        />
       </Helmet>
       {console.log(data)}
       <section className="posts">
@@ -75,6 +79,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "YYYY.MM.DD")
+        description
         tags
       }
       fields {

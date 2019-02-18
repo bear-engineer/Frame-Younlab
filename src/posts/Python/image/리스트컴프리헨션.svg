@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="318px" height="56px" viewBox="0 0 318 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(-1.000000, -1.000000)">
+            <g id="Group" transform="translate(14.000000, 0.000000)">
+                <text id="item" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#373131">
+                    <tspan x="0" y="53">item</tspan>
+                </text>
+                <text id="for" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#373131">
+                    <tspan x="70" y="53">for</tspan>
+                </text>
+                <text id="item" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#373131">
+                    <tspan x="128" y="53">item</tspan>
+                </text>
+                <text id="in-range(1,-6)" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#373131">
+                    <tspan x="198" y="53">in range(1, 6)</tspan>
+                </text>
+                <polyline id="Path" stroke="#F5A623" points="81 35.2500555 81 19 238.227863 19 238.227863 35.2500555"></polyline>
+                <path d="M17,35.2500555 L17,19" id="Path-Copy" stroke="#F5A623"></path>
+                <text id="반복문" font-family="AppleSDGothicNeo-Light, Apple SD Gothic Neo" font-size="12" font-weight="300" fill="#373131">
+                    <tspan x="144" y="11">반복문</tspan>
+                </text>
+                <text id="표현식" font-family="AppleSDGothicNeo-Light, Apple SD Gothic Neo" font-size="12" font-weight="300" fill="#373131">
+                    <tspan x="1" y="11">표현식</tspan>
+                </text>
+            </g>
+            <text id="[" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#373131">
+                <tspan x="0" y="52">[</tspan>
+            </text>
+            <text id="]" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#373131">
+                <tspan x="315" y="52">]</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
