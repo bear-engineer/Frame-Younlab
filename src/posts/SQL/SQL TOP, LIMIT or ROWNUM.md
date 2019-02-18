@@ -18,26 +18,26 @@ SELECT TOP 문은 수천개의 레코드가 있는 큰 테이블에서 유용한
 ## SQL Server / MS Access 문
 
 ```sql
-	SELECT TOP number|percent column_name(s)
-	FROM table_name
-	WHERE condition;
+SELECT TOP number|percent column_name(s)
+FROM table_name
+WHERE condition;
 ```
 
 ## MySQL 문
 
 ```sql
-	SELECT column_name(s)
-	FROM table_name
-	WHERE condition
-	LIMIT number;
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
 ```
 
 ## Oracle 문
 
 ```sql
-	SELECT column_name(s)
-	FROM table_name
-	WHERE ROWNUM <= number;
+SELECT column_name(s)
+FROM table_name
+WHERE ROWNUM <= number;
 ```
 
 ### Extra SQL TOP, LIMIT, ROWNUM
@@ -45,7 +45,7 @@ SELECT TOP 문은 수천개의 레코드가 있는 큰 테이블에서 유용한
 다음의 SQL 문은 “Customers” 테이블에서 처음 세 개의 레코드를 출력한다.
 
 ```sql
-	SELECT TOP 3 * FROM Customers;
+SELECT TOP 3 * FROM Customers;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_top&ss=-1))
@@ -53,8 +53,8 @@ SELECT TOP 문은 수천개의 레코드가 있는 큰 테이블에서 유용한
 다음의 SQL 문은 LIMIT 문을 사용하는 동일한 예제를 보여준다.
 
 ```sql
-	SELECT * FROM Customers
-	LIMIT 3;
+SELECT * FROM Customers
+LIMIT 3;
 ```
 
 > 결과 확인은 여기서 : W3schools([MySQL Tryit Editor v1.0](https://www.w3schools.com/sql/trymysql.asp?filename=trysql_select_limit))
@@ -62,8 +62,8 @@ SELECT TOP 문은 수천개의 레코드가 있는 큰 테이블에서 유용한
 다음의 SQL 문은 ROWNUM 을 사용하는 동일한 예제를 보여준다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE ROWNUM <= 3;
+SELECT * FROM Customers
+WHERE ROWNUM <= 3;
 ```
 
 ### Extra SQL TOP PERCENT
@@ -71,7 +71,7 @@ SELECT TOP 문은 수천개의 레코드가 있는 큰 테이블에서 유용한
 다음의 SQL 문은 “Customers” 테이블에서 레코드의 50%만 출력한다.
 
 ```sql
-	SELECT TOP 50 PERCENT * FROM Customers;
+SELECT TOP 50 PERCENT * FROM Customers;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_top_percent&ss=-1))
@@ -81,8 +81,8 @@ SELECT TOP 문은 수천개의 레코드가 있는 큰 테이블에서 유용한
 다음 SQL 문은 “Customers” 테이블에서 국가가 “Germany” 인 처음 세개의 레코드를 출력한다.
 
 ```sql
-	SELECT TOP 3 * FROM Customers
-	WHERE Country = 'Germany';
+SELECT TOP 3 * FROM Customers
+WHERE Country = 'Germany';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_top_where&ss=-1))
@@ -90,9 +90,9 @@ SELECT TOP 문은 수천개의 레코드가 있는 큰 테이블에서 유용한
 다음의 SQL 문은 LIMIT 문을 사용하는 동일한 예제다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE Country = 'Germany'
-	LIMIT 3;
+SELECT * FROM Customers
+WHERE Country = 'Germany'
+LIMIT 3;
 ```
 
 > 결과 확인은 여기서 : W3schools([MySQL Tryit Editor v1.0](https://www.w3schools.com/sql/trymysql.asp?filename=trysql_select_limit_where))
@@ -100,6 +100,6 @@ SELECT TOP 문은 수천개의 레코드가 있는 큰 테이블에서 유용한
 다음의 SQL 문은 ROWNUM 문을 사용하는 동일한 예제다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE Country='Germany' AND ROWNUM <= 3;
+SELECT * FROM Customers
+WHERE Country='Germany' AND ROWNUM <= 3;
 ```

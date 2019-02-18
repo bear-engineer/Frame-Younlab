@@ -80,7 +80,7 @@ tags: ["sql", "translation"]
 다음 SQL 문은 “Customers” 테이블의 모든 레코드를 선택한다.
 
 ```sql
-	SELECT * FROM Customers;
+SELECT * FROM Customers;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all))

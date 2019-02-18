@@ -15,17 +15,17 @@ tags: ["sql", "translation"]
 ## IN 구문
 
 ```sql
-	SELECT column_name(s)
-	FROM table_name
-	WHERE column_name IN (value1, value2, value3, ...)
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, value3, ...)
 ```
 
 Or
 
 ```sql
-	SELECT column_name(s)
-	FROM table_name
-	WHERE column_name IN (SELECT STATEMNT);
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMNT);
 ```
 
 ### Extra IN
@@ -33,8 +33,8 @@ Or
 다음의 SQL 문은 “Germany”, “France” 및 “UK” 에 있는 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE Country IN ('Germany', 'France', 'UK');
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_in))
@@ -42,8 +42,8 @@ Or
 다음의 SQL 문은 “Germany”, “France” 또는 “UK” 에 있지 않은 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE Country NOT IN ('Germany', 'France', 'UK');
+SELECT * FROM Customers
+WHERE Country NOT IN ('Germany', 'France', 'UK');
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_in_not))
@@ -51,8 +51,8 @@ Or
 다음의 SQL 문은 공급 업체와 동일한 국가의 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE Country IN (SELECT Country FROM Suppliers);
+SELECT * FROM Customers
+WHERE Country IN (SELECT Country FROM Suppliers);
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_in2))

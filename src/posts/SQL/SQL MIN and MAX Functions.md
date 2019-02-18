@@ -15,17 +15,17 @@ tags: ["sql", "translation"]
 ## MIN() 구문
 
 ```sql
-	SELECT MIN(column_name)
-	FROM table_name
-	WHERE condition;
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
 ```
 
 ## MAX() 구문
 
 ```sql
-	SELECT MAX(column_name)
-	FROM table_name
-	WHERE condition;
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
 ```
 
 ### Extra MIN()
@@ -33,8 +33,8 @@ tags: ["sql", "translation"]
 다음의 SQL 문은 가장 저렴한 제품의 가격을 찾는다.
 
 ```sql
-	SELECT MIN(Price) AS SamllestPrice
-	FROM Products;
+SELECT MIN(Price) AS SamllestPrice
+FROM Products;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_min))
@@ -48,8 +48,8 @@ tags: ["sql", "translation"]
 다음의 SQL 문은 가장 비싼 제품의 가격을 찾습니다.
 
 ```sql
-	SELECT MAX(Price) AS LargestPrice
-	FROM Products;
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_max))

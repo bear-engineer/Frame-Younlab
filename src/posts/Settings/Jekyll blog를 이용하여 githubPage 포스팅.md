@@ -30,6 +30,7 @@ brew uninstall ruby
 ```
 
 <br>
+
 `rbenv` 를 사용하기 위하여 shell 의 설정파일에 아래의 옵션을 추가해주자, `zsh`를 사용하는 경우 `~/.zshrc`, 기본 `bash`를 사용하는 경우 `~/.bash_profile` 에 작성한다.
 
 ```sh
@@ -41,6 +42,7 @@ eval "$(rbenv init -)"
 설정파일을 작성한 후 터미널 종료 후 재시작한다.
 
 <br>
+
 `rbenv`를 이용하여 `ruby`를 설치, 사용할 `ruby` 버젼을 지정한다.
 
 ```sh
@@ -54,6 +56,7 @@ rbenv versions
 `*` 표가 붙은 부분이 현제 적용된 `ruby` 버젼이다.
 
 <br>
+
 새 `ruby`버젼이 설치 되면 `rbenv rehash` 명령어를 실행한다 해당 명령어를 사용하면 `rbenv`가 관리하는 루비 명령어들을 `~/.rbenv/shims` 디렉토리에 셸 스크립트 파일로 복사한다.
 
 ```sh

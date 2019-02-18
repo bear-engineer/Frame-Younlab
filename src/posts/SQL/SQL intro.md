@@ -58,7 +58,7 @@ SQL은 ANSI / ISO 표준이지만 각각의 다른버전의 SQL 언어가 있다
 ### Extra `Customers` 테이블을 확인해보자
 
 ```sql
-	SELECT * FROM Customers;
+SELECT * FROM Customers;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all))

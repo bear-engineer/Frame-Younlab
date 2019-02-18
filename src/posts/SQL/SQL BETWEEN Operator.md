@@ -15,9 +15,9 @@ tags: ["sql", "translation"]
 ## BETWEEN 구문
 
 ```sql
-	SELECT column_name(s)
-	FROM table_name
-	WHERE column_name BETWEEN value1 AND value2;
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
 ```
 
 ### Extra BETWEEN
@@ -25,8 +25,8 @@ tags: ["sql", "translation"]
 다음의 SQL 문은 가격이 10과 20 사이의 모든 제품을 출력한다.
 
 ```sql
-	SELECT * FROM Products
-	WHERE Price BETWEEN 10 AND 20;
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_between))
@@ -36,8 +36,8 @@ tags: ["sql", "translation"]
 앞의 예제 범위를 벗어난 제품을 표시하려면 `NOT BETWEEN`
 
 ```sql
-	SELECT * FORM Products
-	WHERE Price NOT BETWEEN 10 AND 20;
+SELECT * FORM Products
+WHERE Price NOT BETWEEN 10 AND 20;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_not_between))
@@ -47,9 +47,9 @@ tags: ["sql", "translation"]
 다음의 SQL 문은 가격이 10과 20 사이인 모든 제품을 출력한다. CategoryID가 1, 2 또는 3 인 제품을 표시하지 않는다.
 
 ```sql
-	SELECT * FROM Products
-	WHERE (Price BETWEEN 10 AND 20)
-	AND NOT CategoryID IN (1,2,3);
+SELECT * FROM Products
+WHERE (Price BETWEEN 10 AND 20)
+AND NOT CategoryID IN (1,2,3);
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_between_in))

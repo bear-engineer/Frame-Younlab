@@ -21,9 +21,9 @@ not 연산자는 조건이 참이 아닌 경우 즉 `FALSE` 일 경우에 레코
 ## and 구문
 
 ```sql
-	SELECT colunm1, colum2, ...
-	FROM table_name
-	WHERE condition1 AND condition2 AND condition3 ...;
+SELECT colunm1, colum2, ...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3 ...;
 ```
 
 condition1 과 condition2 와 condition3 가 모두 해당할 경우
@@ -31,9 +31,9 @@ condition1 과 condition2 와 condition3 가 모두 해당할 경우
 ## or 구문
 
 ```sql
-	SELECT column1, column2, ...
-	FROM table_name
-	WHERE condition1 OR condition2 OR condition3 ...;
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 OR condition2 OR condition3 ...;
 ```
 
 condition1 이나 condition2 나 condition3 어느것중 하나라도 해당할 경우
@@ -41,9 +41,9 @@ condition1 이나 condition2 나 condition3 어느것중 하나라도 해당할 
 ## not 문법
 
 ```sql
-	SELECT column1, column2, ...
-	FROM table_name
-	WHERE NOT condition;
+SELECT column1, column2, ...
+FROM table_name
+WHERE NOT condition;
 ```
 
 condition 이 아닐 경우
@@ -53,8 +53,8 @@ condition 이 아닐 경우
 다음 SQL 문은 country 가 “Germany” 이고 도시가 “Berlin” 인 “Customers” 의 모든 필드를 선택한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE Country='Germany' AND City='Berlin';
+SELECT * FROM Customers
+WHERE Country='Germany' AND City='Berlin';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where_and))
@@ -62,8 +62,8 @@ condition 이 아닐 경우
 ### Extra `or`
 
 ```sql
-	SELECT * FROM Customers
-	WHERE City='Berlin' OR City='München';
+SELECT * FROM Customers
+WHERE City='Berlin' OR City='München';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where_or))
@@ -71,8 +71,8 @@ condition 이 아닐 경우
 ### Extra `not`
 
 ```sql
-	SELECT * FROM Customers
-	WHERE NOT Country='Germany';
+SELECT * FROM Customers
+WHERE NOT Country='Germany';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where_not))
@@ -86,8 +86,8 @@ and, or, not 연산자를 결합 할 수도 있다.
 > 복잡한 표현식을 사용 할 경우 괄호를 이용한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE Country='Germany' AND (City='Berlin' OR City='München');
+SELECT * FROM Customers
+WHERE Country='Germany' AND (City='Berlin' OR City='München');
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where_and_or))
@@ -95,8 +95,8 @@ and, or, not 연산자를 결합 할 수도 있다.
 다음의 SQL 문은 country가 “Germany”가 아니며 “USA”가 아닌 “Customers”의 모든 필드를 선택한다.
 
 ```sql
-	SELECT *FROM Customers
-	WHERE NOT Country='Germany' AND NOT Country='USA';
+SELECT *FROM Customers
+WHERE NOT Country='Germany' AND NOT Country='USA';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where_not_and))

@@ -25,9 +25,9 @@ LIKE 연산자와 함께 사용되는 두 개의 와일드 카드가 있다.
 ## LIKE 구문
 
 ```sql
-	SELECT column1, column2, ...
-	FROM table_name
-	WHERE columnN LIKE pattern;
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
 ```
 
 > AND , OR 연산자를 사용하여 여러 조건을 결합 할 수도 있다.
@@ -70,8 +70,8 @@ LIKE 연산자와 함께 사용되는 두 개의 와일드 카드가 있다.
 다음의 SQL 문은 CustomerName 가 “a” 로 시작하는 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE CustomerName LIKE 'a%';
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_like))
@@ -79,8 +79,8 @@ LIKE 연산자와 함께 사용되는 두 개의 와일드 카드가 있다.
 다음의 SQL 문은 CustomerName 가 ”a” 로 끝나는 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE CustomerName LIKE '%a';
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%a';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_like_ending))
@@ -88,8 +88,8 @@ LIKE 연산자와 함께 사용되는 두 개의 와일드 카드가 있다.
 다음의 SQL 문은 CustomerName 가 “or” 이 들어간 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE CustomerName LIKE '%or%';
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%or%';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_like_pattern))
@@ -97,8 +97,8 @@ LIKE 연산자와 함께 사용되는 두 개의 와일드 카드가 있다.
 다음의 SQL 문은 두 번째 위치에 “r” 이 들어간 CustomerName 를 가진 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE CustomerName LIKE '_r%';
+SELECT * FROM Customers
+WHERE CustomerName LIKE '_r%';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_like_underscore))
@@ -106,8 +106,8 @@ LIKE 연산자와 함께 사용되는 두 개의 와일드 카드가 있다.
 다음의 SQL 문은 CustomerName 가 “a” 로 시작하고 길이가 3자 이상인 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE CustomerName LIKE 'a_%_%';
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a_%_%';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_like_start_least))
@@ -115,8 +115,8 @@ LIKE 연산자와 함께 사용되는 두 개의 와일드 카드가 있다.
 다음의 SQL 문은 ContactName 가 “a” 로 시작하고 “o” 로 끝나는 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE ContactName LIKE 'a%o';
+SELECT * FROM Customers
+WHERE ContactName LIKE 'a%o';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_like_start_end))
@@ -124,8 +124,8 @@ LIKE 연산자와 함께 사용되는 두 개의 와일드 카드가 있다.
 다음의 SQL 문은 CustomerName 가 “a” 로 시작하지 않는 모든 고객을 출력한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE CustomerName NOT LIKE 'a%';
+SELECT * FROM Customers
+WHERE CustomerName NOT LIKE 'a%';
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_like_not))

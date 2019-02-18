@@ -16,8 +16,8 @@ SELECT Distinct 는 고유한 값만 리턴한다.
 ### SELECT Distinct 구문
 
 ```sql
-	SELECT DISTINCT column1, column2, ...
-	FROM table_name;
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
 ```
 
 ### SELECT Extra
@@ -25,7 +25,7 @@ SELECT Distinct 는 고유한 값만 리턴한다.
 다음의 SQL 문은 Customers 테이블의 “Country” 열에 있는 모든(중복 포함) 값을 선택한다.
 
 ```sql
-	SELECT Country FROM Customers;
+SELECT Country FROM Customers;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_no_distinct))
@@ -37,7 +37,7 @@ SELECT Distinct 는 고유한 값만 리턴한다.
 다음의 SQL 문은 Customers 테이블의 “Country” 열에서 중복되지 않게 값을 출력한다.
 
 ```sql
-	SELECT DISTINCT Country FROM Customers;
+SELECT DISTINCT Country FROM Customers;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_distinct))
@@ -45,7 +45,7 @@ SELECT Distinct 는 고유한 값만 리턴한다.
 다음의 SQL 문은 서로 다른 고객 국가의 수를 나열한다.(중복되지 않은 국가의 숫자)
 
 ```sql
-	SELECT COUNT(DISTINCT Country) FROM Customers;
+SELECT COUNT(DISTINCT Country) FROM Customers;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_distinct2))

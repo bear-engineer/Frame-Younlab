@@ -16,25 +16,25 @@ tags: ["sql", "translation"]
 ## COUNT() 구문
 
 ```sql
-	SELECT COUNT(column_name)
-	FROM table_name
-	WHERE condition;
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
 ```
 
 ## AVG() 구문
 
 ```sql
-	SELECT AVG(column_name)
-	FROM table_name
-	WHERE condition;
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
 ```
 
 ## SUM() 구문
 
 ```sql
-	SELECT SUM(column_name)
-	FROM table_name
-	WHERE condition;
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
 ```
 
 ### Extra COUNT()
@@ -42,8 +42,8 @@ tags: ["sql", "translation"]
 다음의 SQL 문은 제품의 수를 찾는다.
 
 ```sql
-	SELECT COUNT(ProductID)
-	FROM Products;
+SELECT COUNT(ProductID)
+FROM Products;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_count))
@@ -53,8 +53,8 @@ tags: ["sql", "translation"]
 다음의 SQL 문은 모든 제품의 평균 가격을 찾는다.
 
 ```sql
-	SELECT AVG(Price)
-	FROM Products;
+SELECT AVG(Price)
+FROM Products;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_avg))
@@ -64,8 +64,8 @@ tags: ["sql", "translation"]
 다음의 SQL 문은 OrderDetails 테이블의 “Quantity” 필드의 합계를 찾는다.
 
 ```sql
-	SELECT SUM(Quantity)
-	FROM OrderDetails;
+SELECT SUM(Quantity)
+FROM OrderDetails;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_sum))

@@ -15,9 +15,9 @@ tags: ["sql", "translation"]
 ## Where 구문
 
 ```sql
-	SELECT column1, column2, ...
-	FROM table_name
-	WHERE condition;
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
 ```
 
 > 참고로 Where문은 SELECT 문에서만 사용되는 것이 아닌 UPDATE, DELETE 문에서도 사용된다.
@@ -27,8 +27,8 @@ tags: ["sql", "translation"]
 다음의 SQL 문은 “Costomers” 테이블에서 “Mexico” 국가의 모든 고객을 선택한다.
 
 ```sql
-	SELECT * FROM Customers
-	WHERE Country='Mexico';
+SELECT * FROM Customers
+WHERE Country='Mexico';
 ```
 
 내가 원하는 필터링 네임을 넣고 해당하는 테이블에서 골라서 빼오는걸로 이해하면 될듯 하다.
@@ -41,8 +41,8 @@ SQL언어도 마찬가지로 텍스트(String) 값은 묶어주어야 한다. �
 ### TEXT & INT
 
 ```sql
-	SELECT * FROM Customers
-	WHERE CustomerID=1;
+SELECT * FROM Customers
+WHERE CustomerID=1;
 ```
 
 CustomerID 값이 1인 행을 출력한다.

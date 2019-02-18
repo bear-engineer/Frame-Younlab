@@ -17,9 +17,9 @@ Order by 키워드는 결과 집합을 오름차순 또는 내림차순으로 �
 ## ORDER BY 구문
 
 ```sql
-	SELECT column1, column2, ...
-	FROM table_name
-	ORDER BY column1, column2, ... ASC|DESC;
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
 ```
 
 ### Extra ORDER BY
@@ -27,8 +27,8 @@ Order by 키워드는 결과 집합을 오름차순 또는 내림차순으로 �
 다음의 SQL 문은 “고객” 테이블의 모든 고객을 “국가”순으로 정렬한다.
 
 ```sql
-	SELECT * FROM Customers
-	ORDER BY Country;
+SELECT * FROM Customers
+ORDER BY Country;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_orderby))
@@ -38,8 +38,8 @@ Order by 키워드는 결과 집합을 오름차순 또는 내림차순으로 �
 다음의 SQL 문은 “고객” 테이블의 모든 고객을 “국가”의 격순으로 정렬한다.
 
 ```sql
-	SELECT * FROM Customers
-	ORDER BY Country DESC;
+SELECT * FROM Customers
+ORDER BY Country DESC;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_orderby_desc))
@@ -49,8 +49,8 @@ Order by 키워드는 결과 집합을 오름차순 또는 내림차순으로 �
 다음의 SQL 문은 “Customers” 테이블의 모든 고객을 “Country” 및 “CoustomerName” 열 순으로 정렬한다.
 
 ```sql
-	SELECT * FROM Customers
-	ORDER BY Country, CustomersName;
+SELECT * FROM Customers
+ORDER BY Country, CustomersName;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_orderby2))
@@ -60,8 +60,8 @@ Order by 키워드는 결과 집합을 오름차순 또는 내림차순으로 �
 다음의 SQL 문은 “Customers” 테이블의 모든 고객을 “Country” 로 오름차순으로 정렬하고 “CustomerName”열로 내림차순으로 정렬한다.
 
 ```sql
-	SELECT * FROM Customers
-	ORDER BY Country ASC, CustomerName DESC;
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_orderby3))

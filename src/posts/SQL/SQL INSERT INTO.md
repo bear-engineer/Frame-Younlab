@@ -18,15 +18,15 @@ INSERT INTO 문은 테이블에 새 레코드를 삽입하는데 사용된다.
 첫 번째 방법은 삽입 할 열 이름과 값을 모두 지정하는 것이다.
 
 ```sql
-	INSERT INTO table_name (column1, column2, column3, ...)
-	VALUES (value1, value2, value3, ...);
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
 ```
 
 표의 모든 열에 값을 추가하는 경우 SQL 조회에소 열 이름을 지정할 필요가 없다. 그러나 값의 순서가 표의 열과 동일한 순서인지를 확인하라, INSERT INTO 구문은 다음과 같다.
 
 ```sql
-	INSERT INTO table_name
-	VALUES (value1, value2, value3, ...);
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
 ```
 
 ### Extra INSERT INTO
@@ -34,8 +34,8 @@ INSERT INTO 문은 테이블에 새 레코드를 삽입하는데 사용된다.
 다음의 SQL 문은 “Customers” 테이블에 새 레코드를 삽입한다.
 
 ```sql
-	INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
-	VALUES('Cardianl', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES('Cardianl', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_insert_colname))
@@ -51,8 +51,8 @@ INSERT INTO 문은 테이블에 새 레코드를 삽입하는데 사용된다.
 다음의 SQL 문은 새 레코드를 삽입하지만 “CustomerName”, “City” 및 “Country” 열에만 데이터를 삽입한다. CustomerID는 자동으로 업데이트 된다.
 
 ```sql
-	INSERT INTO Customers (CustomerName, City, Country)
-	VALUES ('Cardinal', 'Stavanger', 'Norway');
+INSERT INTO Customers (CustomerName, City, Country)
+VALUES ('Cardinal', 'Stavanger', 'Norway');
 ```
 
 > 결과 확인은 여기서 : W3schools([SQL Tryit Editor v1.6](https://www.w3schools.com/sql/trysql.asp?filename=trysql_insert_cols))

@@ -18,9 +18,9 @@ Null 값이 있는 필드는 값이 없는 필드다. 즉 비어있다는 의미
 ## Null 값을 테스트 하는 방법
 
 ```sql
-	SELECT column_names
-	FROM table_name
-	WHERE column_name IS NULL;
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
 ```
 
 =, < 과 > 와 같은 비교 연산자로 Null 값을 테스트 할 수 없다.
@@ -29,9 +29,9 @@ Null 값이 있는 필드는 값이 없는 필드다. 즉 비어있다는 의미
 ## IS NULL 구문
 
 ```sql
-	SELECT column_name
-	FROM table_name
-	WHERE column_name IS NULL;
+SELECT column_name
+FROM table_name
+WHERE column_name IS NULL;
 ```
 
 table_name 라는 데이터베이스에서 column_name 라는 필드가 값이 Null 인 경우 출력
@@ -39,9 +39,9 @@ table_name 라는 데이터베이스에서 column_name 라는 필드가 값이 N
 ## IS NOT NULL 구문
 
 ```sql
-	SELECT column_names
-	FROM table_name
-	WHERE column_name IS NOT NULL;
+SELECT column_names
+FROM table_name
+WHERE column_name IS NOT NULL;
 ```
 
 table_name 라는 데이터베이스에서 column_name 라는 필드가 값이 Null 이 아닐 경우 출력
@@ -51,8 +51,8 @@ table_name 라는 데이터베이스에서 column_name 라는 필드가 값이 N
 ### Extra IS NOT NULL
 
 ```sql
-	SELECT LastName, FirstName, Address FROM Persons
-	WHERE Address IS NOT NULL;
+SELECT LastName, FirstName, Address FROM Persons
+WHERE Address IS NOT NULL;
 ```
 
 결과는 다음과 같다.
