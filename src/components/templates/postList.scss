@@ -1,0 +1,38 @@
+@import "../styles/config/_variables";
+
+.pagenation {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      float: left;
+      box-sizing: border-box;
+      padding: 8px 12px;
+      margin: 0 4px;
+      -webkit-box-shadow: 0px 2px 32px -10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 2px 32px -10px rgba(0, 0, 0, 0.5);
+      background: #fff;
+      line-height: 1;
+      border-radius: 3px;
+      transition: all 0.2s ease-in-out;
+    }
+    li:hover {
+      background: $light-violet;
+      a {
+        color: $strong-violet;
+      }
+    }
+    li > a {
+      display: block;
+    }
+    li:nth-of-type(1) {
+      margin: 0 4px 0 0;
+    }
+  }
+  ul::after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+  }
+}

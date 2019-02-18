@@ -50,13 +50,14 @@ exports.createPages = ({ graphql, actions }) => {
       // Create post list
       Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
-          path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+          path: i === 0 ? `/posts` : `/posts/${i + 1}`,
           component: postListTemplate,
           context: {
             limit: postsPerPage,
             skip: i * postsPerPage,
             numPages,
-            currentPage: i + 1
+            currentPage: i + 1,
+            thisPage: i
           }
         });
       });
