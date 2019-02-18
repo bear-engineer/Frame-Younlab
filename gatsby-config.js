@@ -42,10 +42,33 @@ module.exports = {
     author: `@Sehyeon Youn`,
     github: `https://github.com/Younlab`,
     facebookAppId: process.env.FACEBOOK_APP_ID,
-    baseUrl: `https://younlab.com`
+    baseUrl: `https://younlab.com`,
+    siteUrl: `https://younlab.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/siteMap.xml`,
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
