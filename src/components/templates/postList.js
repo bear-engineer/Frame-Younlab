@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Post from "../container/post";
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,11 +18,11 @@ class PostList extends Component {
       }
     }
     list[0].url = "/";
-    console.log(list);
-    console.log(pageNum);
     return list.map(number => (
       <li key={`posts${number.pageIndex}`} className={number.class}>
-        <Link to={`/posts/${number.url}`}>{number.pageIndex}</Link>
+        <AniLink to={`/posts/${number.url}`} fade duration={0.4}>
+          {number.pageIndex}
+        </AniLink>
       </li>
     ));
   };
@@ -56,17 +57,17 @@ class PostList extends Component {
           <ul>
             {!isFirst && (
               <li>
-                <Link to={`/posts/${prevPage}`}>
+                <AniLink to={`/posts/${prevPage}`} fade duration={0.4}>
                   <FontAwesomeIcon icon={faArrowLeft} />
-                </Link>
+                </AniLink>
               </li>
             )}
             {this.postListNum(numPages, currentPage)}
             {!isLast && (
               <li>
-                <Link to={`/posts/${nextPage}`}>
+                <AniLink to={`/posts/${nextPage}`} fade duration={0.4}>
                   <FontAwesomeIcon icon={faArrowRight} />
-                </Link>
+                </AniLink>
               </li>
             )}
           </ul>

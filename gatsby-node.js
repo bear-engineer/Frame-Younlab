@@ -44,7 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
     .then(result => {
       const posts = result.data.allMarkdownRemark.edges;
       const tags = result.data.allMarkdownRemark.group;
-      const postsPerPage = 6;
+      const postsPerPage = 10;
       const numPages = Math.ceil(posts.length / postsPerPage);
 
       // Create post list
