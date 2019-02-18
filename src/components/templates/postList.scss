@@ -1,6 +1,7 @@
 @import "../styles/config/_variables";
 
 .pagenation {
+  padding: 16px 8px;
   ul {
     list-style: none;
     padding: 0;
@@ -34,5 +35,11 @@
     height: 0;
     display: block;
     clear: both;
+  }
+  .num-object-active {
+    background: $light-violet;
+    a {
+      color: $strong-violet;
+    }
   }
 }

@@ -56,8 +56,7 @@ exports.createPages = ({ graphql, actions }) => {
             limit: postsPerPage,
             skip: i * postsPerPage,
             numPages,
-            currentPage: i + 1,
-            thisPage: i
+            currentPage: i + 1
           }
         });
       });

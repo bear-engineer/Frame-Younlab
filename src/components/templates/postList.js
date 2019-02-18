@@ -7,16 +7,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./postList.scss";
 class PostList extends Component {
-  postListNum = num => {
+  postListNum = (num, pageNum) => {
     let list = [];
     for (let i = 0; i < num; i++) {
       let num = i + 1;
-      list.push({ pageIndex: num, url: num });
+      if (num === pageNum) {
+        list.push({ pageIndex: num, url: num, class: "num-object-active" });
+      } else {
+        list.push({ pageIndex: num, url: num, class: "num-object" });
+      }
     }
     list[0].url = "/";
     console.log(list);
+    console.log(pageNum);
     return list.map(number => (
-      <li key={`posts${number.pageIndex}`}>
+      <li key={`posts${number.pageIndex}`} className={number.class}>
         <Link to={`/posts/${number.url}`}>{number.pageIndex}</Link>
       </li>
     ));
@@ -58,7 +63,7 @@ class PostList extends Component {
                 </Link>
               </li>
             )}
-            {this.postListNum(numPages)}
+            {this.postListNum(numPages, currentPage)}
             {!isLast && (
               <li>
                 <Link to={`/posts/${nextPage}`}>
