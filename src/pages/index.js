@@ -8,10 +8,6 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Helmet>
       <title>{data.site.siteMetadata.title} | Home</title>
-      <meta
-        name="google-site-verification"
-        content="IO1fN1C7pwwz3xMRNq3S4B7olnPYMI86ySX2hKVr__c"
-      />
     </Helmet>
     <section>
       {data.allMarkdownRemark.edges.map(post => (

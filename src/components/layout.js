@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import SideBar from "./container/sideBar";
-
+import { Helmet } from "react-helmet";
 import "./styles/layout.scss";
 
 class Layout extends Component {
@@ -48,6 +48,12 @@ class Layout extends Component {
         `}
         render={data => (
           <div className="layout">
+            <Helmet>
+              <meta
+                name="google-site-verification"
+                content="IO1fN1C7pwwz3xMRNq3S4B7olnPYMI86ySX2hKVr__c"
+              />
+            </Helmet>
             <section
               className="layout-left-side-wrap"
               style={this.sideBarHeight()}
