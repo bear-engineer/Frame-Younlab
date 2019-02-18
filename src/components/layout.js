@@ -54,6 +54,10 @@ class Layout extends Component {
                 content="IO1fN1C7pwwz3xMRNq3S4B7olnPYMI86ySX2hKVr__c"
               />
               <meta
+                name="naver-site-verification"
+                content="35e26be134b7ce0cd968a5e7c5ac87de3e40714e"
+              />
+              <meta
                 name="keywords"
                 content="python, js, javascript, younlab, 윤랩, 블로그, 기술블로그, 개발자, django"
               />
