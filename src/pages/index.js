@@ -8,6 +8,8 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Helmet>
       <title>{data.site.siteMetadata.title} | Home</title>
+      <meta name="description" content="Younlab blog, 나의 웹 개발 일기" />
+      <meta name="title" content={data.site.siteMetadata.title} />
     </Helmet>
     <section>
       {data.allMarkdownRemark.edges.map(post => (

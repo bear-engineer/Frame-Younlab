@@ -53,6 +53,10 @@ class Layout extends Component {
                 name="google-site-verification"
                 content="IO1fN1C7pwwz3xMRNq3S4B7olnPYMI86ySX2hKVr__c"
               />
+              <meta
+                name="keywords"
+                content="python, js, javascript, younlab, 윤랩, 블로그, 기술블로그, 개발자, django"
+              />
             </Helmet>
             <section
               className="layout-left-side-wrap"

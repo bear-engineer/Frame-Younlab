@@ -28,6 +28,7 @@ const Posts = ({ data }) => {
           name="description"
           content={data.markdownRemark.frontmatter.description}
         />
+        <meta name="title" content={data.markdownRemark.frontmatter.title} />
       </Helmet>
       {console.log(data)}
       <section className="posts">
