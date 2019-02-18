@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { kebabCase } from "lodash";
 import LinesEllipsis from "react-lines-ellipsis";
 import "./post.scss";
@@ -10,7 +10,7 @@ const Post = ({ title, description, tags, date, slug, pageKey }) => (
       <span className="post-object-date">{date}</span>
     </div>
     <div className="post-object-right">
-      <Link to={slug}>
+      <AniLink to={slug} fade duration={0.4}>
         <div>
           <h2 className="post-object-title">
             <LinesEllipsis
@@ -31,11 +31,13 @@ const Post = ({ title, description, tags, date, slug, pageKey }) => (
             className="post-object-description"
           />
         </div>
-      </Link>
+      </AniLink>
       <div className="post-object-tag">
         {tags.map(tag => (
           <span className="tag" key={`${pageKey}-${tag}`}>
-            <Link to={`/tags/${kebabCase(tag)}`}>{tag}</Link>
+            <AniLink to={`/tags/${kebabCase(tag)}`} fade duration={0.4}>
+              {tag}
+            </AniLink>
           </span>
         ))}
       </div>

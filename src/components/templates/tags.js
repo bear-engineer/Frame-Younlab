@@ -1,13 +1,12 @@
 import { graphql } from "gatsby";
 import React, { Component } from "react";
-import Layout from "../layout";
 import Post from "../container/post";
 import { Helmet } from "react-helmet";
 class Tag extends Component {
   render() {
     const data = this.props.data.allMarkdownRemark.edges;
     return (
-      <Layout>
+      <div>
         {console.log(this.props.pageContext.tag)}
         <Helmet>
           <title>
@@ -27,7 +26,7 @@ class Tag extends Component {
           />
         ))}
         <span />
-      </Layout>
+      </div>
     );
   }
 }

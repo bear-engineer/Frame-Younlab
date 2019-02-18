@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { Highlight, connectAutoComplete } from "react-instantsearch-dom";
 import AutoSuggest from "react-autosuggest";
 import "../styles/search.scss";
-import { Link } from "gatsby";
+
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 class AutoComplete extends Component {
   static propTypes = {
     hits: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -44,7 +45,7 @@ class AutoComplete extends Component {
     console.log(hit);
     return (
       <div className="search-object">
-        <Link to={hit.fields.slug}>
+        <AniLink to={hit.fields.slug} fade duration={0.4}>
           <div className="search-object-title">
             <h4>
               <Highlight
@@ -61,7 +62,7 @@ class AutoComplete extends Component {
               tagName="mark"
             />
           </div>
-        </Link>
+        </AniLink>
       </div>
     );
   }

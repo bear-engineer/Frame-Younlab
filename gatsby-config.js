@@ -49,6 +49,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
     {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/layout.js`)
+      }
+    },
+    {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: `https://www.younlab.com`,

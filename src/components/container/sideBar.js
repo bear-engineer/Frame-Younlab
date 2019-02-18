@@ -1,23 +1,26 @@
 import React from "react";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import kebabCase from "lodash/kebabCase";
 import "../styles/sideBar.scss";
 import Search from "../container/search";
 export default ({ data, title, github }) => (
   <nav className="side-bar">
-    <Link to="/posts">
+    <AniLink to="/posts" fade duration={0.4}>
       <h1 className="side-bar-title">
         {title.subFirstTitle} <span>{title.subLastTitle}</span>
       </h1>
-    </Link>
+    </AniLink>
 
     <Search className="side-bar-search" />
 
     <ul className="side-bar-menu">
       <h2 className="side-bar-menu-title">Menu</h2>
       <li>
-        <Link to="/posts">home</Link>
+        <AniLink to="/posts" fade duration={0.4}>
+          home
+        </AniLink>
       </li>
+
       <li>
         <a href={github}>github</a>
       </li>
@@ -26,10 +29,14 @@ export default ({ data, title, github }) => (
       <h2 className="side-bar-menu-title">Tags</h2>
       {data.map(tag => (
         <li key={tag.fieldValue}>
-          <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
+          <AniLink
+            to={`/tags/${kebabCase(tag.fieldValue)}`}
+            fade
+            duration={0.4}
+          >
             {tag.fieldValue}
             <span>{tag.totalCount}</span>
-          </Link>
+          </AniLink>
         </li>
       ))}
     </ul>

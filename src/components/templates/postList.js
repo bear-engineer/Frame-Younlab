@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { graphql, Link } from "gatsby";
-import Layout from "../layout";
 import Post from "../container/post";
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -35,8 +34,7 @@ class PostList extends Component {
     const posts = this.props.data.allMarkdownRemark.edges;
 
     return (
-      <Layout>
-        {console.log(this.props)}
+      <div>
         <Helmet>
           <title>{`${this.props.data.site.siteMetadata.title} | Page`}</title>
         </Helmet>
@@ -73,7 +71,7 @@ class PostList extends Component {
             )}
           </ul>
         </section>
-      </Layout>
+      </div>
     );
   }
 }

@@ -2,6 +2,7 @@
 @import "../styles/config/_markdownSyntax";
 .posts {
   padding: 0 16px;
+  background: #fdfdfd;
   @include breakpoint(tablat) {
     padding: 0;
   }

@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../layout";
 import { Link, graphql } from "gatsby";
 import { FacebookProvider, Comments, ShareButton } from "react-facebook";
 import { Helmet } from "react-helmet";
@@ -15,7 +14,8 @@ const Posts = ({ data }) => {
     data.markdownRemark.fields.slug
   );
   return (
-    <Layout>
+    <div>
+      {console.log(data)}
       <Helmet>
         <title>{`${data.site.siteMetadata.title} | ${
           data.markdownRemark.frontmatter.title
@@ -61,7 +61,7 @@ const Posts = ({ data }) => {
           </FacebookProvider>
         </section>
       </section>
-    </Layout>
+    </div>
   );
 };
 

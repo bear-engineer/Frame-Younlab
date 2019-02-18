@@ -2,10 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 import Post from "../components/container/post";
 import { Helmet } from "react-helmet";
-import Layout from "../components/layout";
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <div>
     <Helmet>
       <title>{data.site.siteMetadata.title} | Home</title>
       <meta name="description" content="Younlab blog, 나의 웹 개발 일기" />
@@ -23,7 +22,7 @@ const IndexPage = ({ data }) => (
         />
       ))}
     </section>
-  </Layout>
+  </div>
 );
 
 export default IndexPage;
