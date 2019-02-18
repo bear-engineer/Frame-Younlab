@@ -5,7 +5,7 @@ import "../styles/sideBar.scss";
 import Search from "../container/search";
 export default ({ data, title, github }) => (
   <nav className="side-bar">
-    <Link to="/">
+    <Link to="/posts">
       <h1 className="side-bar-title">
         {title.subFirstTitle} <span>{title.subLastTitle}</span>
       </h1>
@@ -16,7 +16,7 @@ export default ({ data, title, github }) => (
     <ul className="side-bar-menu">
       <h2 className="side-bar-menu-title">Menu</h2>
       <li>
-        <Link to="/">home</Link>
+        <Link to="/posts">home</Link>
       </li>
       <li>
         <a href={github}>github</a>
