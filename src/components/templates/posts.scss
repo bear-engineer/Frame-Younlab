@@ -3,6 +3,8 @@
 .posts {
   padding: 0 16px;
   background: #fdfdfd;
+  height: auto;
+  overflow: hidden;
   @include breakpoint(tablat) {
     padding: 0;
   }
