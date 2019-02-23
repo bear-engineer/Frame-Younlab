@@ -37,5 +37,5 @@ def solution(participant, completion):
 ## 해설
 
 - `collections` 모듈의 `Counter()` 함수는 배열 내의 객체를 `key(객체이름) : value(배열 내에 중복수)` 로 리턴한다.
-- 반환된 딕셔너리를 `-` 연산하여 차집합 한다.
+- 반환된 `Counter` 를 `-` 연산하여 차집합 한다.
 - 값, 즉 키값만 추출하여 되돌려준다.
