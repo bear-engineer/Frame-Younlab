@@ -1,5 +1,5 @@
 ---
-title: "Python level : 01 수박수박수박수박수?"
+title: "Python level : 01 수박수박수박수박수"
 date: 2019-02-23
 description: 프로그래머스 문제풀이 Level 1 수박수박수박수박수? python
 tags: ["til", "python", "algorithm"]
