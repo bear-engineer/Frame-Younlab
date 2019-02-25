@@ -7,7 +7,7 @@ tags: ["vuejs", "js"]
 
 ## webpack cli install
 
-```sh
+```bash
 npm install -g @vue/cli
 
 # or

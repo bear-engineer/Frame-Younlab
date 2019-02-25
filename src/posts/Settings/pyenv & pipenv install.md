@@ -11,23 +11,23 @@ pyenv 는 python 의 버젼을 관리해주는 툴이다.
 
 ## mac install
 
-```sh
+```bash
 brew install pyenv
 ```
 
 ## Ubuntu install
 
-```sh
-curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+```bash
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | babash
 ```
 
 > 위의 코드로 설치가 되지 않는다면 curl 이 설치되어 있지 않을 수도 있다. `sudo apt-get install curl` 로 패키지를 설치 해 준 후 다시 실행해 보자.
 
 ### mac
 
-shell 에서 pyenv 가 정상 작동할수 있도록 `~/.bashrc` 또는 `~/.zshrc` 의 맨 아랫구문에 아래의 코드를 삽입해준다.
+bashell 에서 pyenv 가 정상 작동할수 있도록 `~/.babashrc` 또는 `~/.zbashrc` 의 맨 아랫구문에 아래의 코드를 삽입해준다.
 
-```sh
+```bash
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 ```
@@ -44,13 +44,13 @@ pyenv 로 python 을 설치하고 활용하기전에 해당 운영체제마다 �
 
 ### mac
 
-```sh
+```bash
 brew install readline xz
 ```
 
 ### Ubuntu
 
-```sh
+```bash
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
 xz-utils tk-dev
@@ -60,7 +60,7 @@ xz-utils tk-dev
 
 mac 시스템에 설치되어있는 python 이 아닌 pyenv 로 설치된 python 을 사용하도록 pyenv를 통해 설치해보자
 
-```sh
+```bash
 pyenv install -l
 
 # 또는
@@ -86,7 +86,7 @@ pyenv install --list
 
 원하는 버젼 또는 자신의 프로젝트가 지원하는 버젼을 선택해 설치하자
 
-```sh
+```bash
 pyenv install 3.6.5
 ```
 
@@ -96,13 +96,13 @@ pyenv install 3.6.5
 
 pyenv 로 설치한 python 을 전역에서 시스템에 설치된 python 대신 사용하도록 설정한다.
 
-```sh
+```bash
 pyenv global 3.6.5
 ```
 
 아래의 명령어를 입력해보면 `*` 이 `system` 에서 `3.6.5 (set by /usr/local/var/pyenv/version)` 로 이동해 있는 것을 볼 수 있다.
 
-```sh
+```bash
 pyenv versions
 ```
 
@@ -114,13 +114,13 @@ python 패키지를 프로젝트별 사용하는 패키지를 분리해주고, �
 
 ### mac
 
-```sh
+```bash
 brew install pipenv
 ```
 
 ### Ubuntu
 
-```sh
+```bash
 sudo apt install software-properties-common python-software-properties
 sudo add-apt-repository ppa:pypa/ppa
 sudo apt update
@@ -131,7 +131,7 @@ sudo apt install pipenv
 
 ### Ubuntu
 
-```sh
+```bash
 apt-get install python-pip
 pip install pipenv
 ```
@@ -142,7 +142,7 @@ pip install pipenv
 
 사용법은 매우 간단하다. 내가 작업할 프로젝트 폴더 내부에서 해당 스크립트를 입력한다.
 
-```sh
+```bash
 pipenv install
 ```
 
@@ -150,13 +150,13 @@ pipenv install
 
 해당 가상환경을 실행해야 가상환경에 적용된 패키지들이 모두 적용된다. 아래와 같이 스크립트를 실행한다.
 
-```sh
-pipenv shell
+```bash
+pipenv bashell
 ```
 
 패키지를 설치할 때는 아래와같이 `pipenv` 로 설치된다.
 
-```sh
+```bash
 # pipenv install 패키지명
 pipenv install django
 ```

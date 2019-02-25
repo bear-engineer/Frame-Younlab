@@ -7,19 +7,19 @@ tags: ["sql", "psql", "cmd"]
 
 ## install brew
 
-```zsh
+```bash
 brew install postgresql
 ```
 
 ## restart auto reboot psql commend
 
-```zsh
+```bash
 pg_ctl -D /usr/local/var/postgres start && brew services start postgresql
 ```
 
 ## version info
 
-```zsh
+```bash
 postgres -V
 ```
 
@@ -28,7 +28,7 @@ postgres -V
 
 ### psql run
 
-```zsh
+```bash
 psql postgres
 ```
 
@@ -36,7 +36,7 @@ commend line psql 실행문
 
 ### psql users info
 
-```zsh
+```bash
 postgres-# \du
 ```
 
@@ -44,13 +44,13 @@ postgres-# \du
 
 ### root password setting
 
-```zsh
+```bash
 postgres=# \password rootusername
 ```
 
 ### create ROLE
 
-```zsh
+```bash
 postgres=# CREATE ROLE username WITH LOGIN PASSWORD 'password';
 ```
 
@@ -58,25 +58,25 @@ postgres=# CREATE ROLE username WITH LOGIN PASSWORD 'password';
 
 ### alter ROLE
 
-```zsh
+```bash
 postgres=# ALTER ROLE username CREATEDB;
 ```
 
 DB 생성 권한 추가
 
-```zsh
+```bash
 postgres=> ALTER ROLE username SET CLIENT_ENCODING TO 'utf-8';
 ```
 
 인코딩 설정
 
-```zsh
+```bash
 postgres=> ALTER ROLE username SET TIMEZONE TO 'Asia/Seoul';
 ```
 
 타임존 설정
 
-```zsh
+```bash
 postgres=> GRANT ALL PRIVILEGES ON DATABASE dbname TO username;
 ```
 
@@ -84,13 +84,13 @@ DB 권한 부여
 
 ### create DATABASE
 
-```zsh
+```bash
 postgres=# CREATE DATABASE databasename;
 ```
 
 ### db RENAME
 
-```zsh
+```bash
 postgres=> ALTER DATABASE dbname RENAME TO rename_dbname;
 
 postgres=> \q
@@ -100,13 +100,13 @@ postgres=> \q
 
 ### 축약 명령어
 
-```zsh
+```bash
 createuser username --createdb
 ```
 
 유저를 추가하고 DB 생성 권한을 준다.
 
-```zsh
+```bash
 psql dbname -U username
 ```
 
@@ -114,7 +114,7 @@ psql dbname -U username
 
 ### list
 
-```zsh
+```bash
 postgres=> \list
 ```
 
@@ -122,7 +122,7 @@ postgres 의 모든 데이터베이스를 나열한다.
 
 ### connect
 
-```zsh
+```bash
 postgres=> \connect dbname
 ```
 
@@ -130,7 +130,7 @@ postgres=> \connect dbname
 
 ### dt
 
-```zsh
+```bash
 postgres=> \dt
 ```
 

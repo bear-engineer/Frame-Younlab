@@ -11,7 +11,7 @@ tags: ["setting"]
 
       	- Homebrew
       	- git
-      	- zsh, oh-my-zsh
+      	- bash, oh-my-bash
       	- iterm2
       	- vim
       	- vim Highlight
@@ -38,19 +38,19 @@ Homebrew는 패키지 관리자다. 개발하는 Mac 유저는 brew 를 무조�
 
 ### install
 
-```zsh
+```bash
 xcode-select --install
 ```
 
 설치 전 Xcode 개발자 도구가 설치되어 있어야한다.
 
-```zsh
+```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 터미널에 복사/붙여넣기 후 엔터를 입력하면 설치가 시작된다.
 
-```zsh
+```bash
 brew install nodejs
 ```
 
@@ -59,11 +59,11 @@ brew install nodejs
 ## git
 
 ![git](image/git.jpg)
-대표적인 버전관리 툴인 `git` 이다. 앞의 `oh-my-zsh` 의 Plugin 을 설치하기 위해서는 선행 설치 되어있어야한다. `git` 에 대해서는 따로 페이지를 할당하여 자세히 설명한다.
+대표적인 버전관리 툴인 `git` 이다. 앞의 `oh-my-bash` 의 Plugin 을 설치하기 위해서는 선행 설치 되어있어야한다. `git` 에 대해서는 따로 페이지를 할당하여 자세히 설명한다.
 
 ### install
 
-```zsh
+```bash
 brew install git git-lfs
 ```
 
@@ -71,7 +71,7 @@ brew install git git-lfs
 
 ### Setting
 
-```zsh
+```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@your-domain.com"
 git config --global core.precomposeunicode true
@@ -87,7 +87,7 @@ iterm2 는 기본 터미널에 없는 특수하고 강력한 기능이 있다. �
 
 ### install
 
-```zsh
+```bash
 brew cask install iterm2
 ```
 
@@ -97,7 +97,7 @@ brew cask install iterm2
 
 [본격 macOS에 개발 환경 구축하기](https://subicura.com/2017/11/22/mac-os-development-environment-setup.html)
 
-## zsh
+## bash
 
 - 현재 바라보고 있는 패스 안내 (CWD)
 - python user를 위한 virtualenv 안내
@@ -109,43 +109,43 @@ brew cask install iterm2
 
 ### install
 
-```zsh
-brew install zsh zsh-completions
+```bash
+brew install bash bash-completions
 ```
 
-### install oh-my-zsh
+### install oh-my-bash
 
-```zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-bash/master/tools/install.sh)"
 ```
 
-위에서부터 순번으로 설치해 주면 자동으로 기본 Shell 이 bash 에서 zsh 로 변경된다.
+위에서부터 순번으로 설치해 주면 자동으로 기본 Shell 이 bash 에서 bash 로 변경된다.
 
 ### install Plugin
 
-oh-my-zsh 를 설치하면 강력한 플러그인을 사용할 수 있다. 기본적으로 설치되어 있는 Plugin 외에 명령어 하이라이팅(해당하는 코드 별 색상으로 구분해주는 기능) `zsh-syntax-highlighting` 과 이미 한번 입력해 본적이 있는 명령어를 기억하고 해당 키워드를 타이핑 했을 때에 자동으로 팝업 해주는 자동완성 플러그인 `zsh-autosuggestions` 을 설치하자.
+oh-my-bash 를 설치하면 강력한 플러그인을 사용할 수 있다. 기본적으로 설치되어 있는 Plugin 외에 명령어 하이라이팅(해당하는 코드 별 색상으로 구분해주는 기능) `bash-syntax-highlighting` 과 이미 한번 입력해 본적이 있는 명령어를 기억하고 해당 키워드를 타이핑 했을 때에 자동으로 팝업 해주는 자동완성 플러그인 `bash-autosuggestions` 을 설치하자.
 
 해당 install 명령어는 `git`이 먼저 설치되어 있는것을 가정한다.
 
-```zsh
-# zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```bash
+# bash-syntax-highlighting
+git clone https://github.com/bash-users/bash-syntax-highlighting.git ${bash_CUSTOM:-~/.oh-my-bash/custom}/plugins/bash-syntax-highlighting
 
-# zsh-autosuggestions
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+# bash-autosuggestions
+git clone git://github.com/bash-users/bash-autosuggestions $bash_CUSTOM/plugins/bash-autosuggestions
 ```
 
-플러그인을 설치하면 반드시 `~/.zshrc` 파일에 설정을 기입하여야 한다. 해당 파일을 열고 `plugins` 항목에 아래의 옵션을 추가하자.
+플러그인을 설치하면 반드시 `~/.bashrc` 파일에 설정을 기입하여야 한다. 해당 파일을 열고 `plugins` 항목에 아래의 옵션을 추가하자.
 
-```zsh
+```bash
 plugins=(
   git
-  zsh-syntax-highlighting
-  zsh-autosuggestions
+  bash-syntax-highlighting
+  bash-autosuggestions
 )
 ```
 
-옵션을 추가하고 `source ~/.zshrc` 명령어를 입력해 zsh를 재실행 시켜주면 해당 플러그인이 적용된다. `source ~/.zshrc` 명령어를 입력하지 않으면 터미널을 재시작 하기 전까지는 적용되지 않는다.
+옵션을 추가하고 `source ~/.bashrc` 명령어를 입력해 bash를 재실행 시켜주면 해당 플러그인이 적용된다. `source ~/.bashrc` 명령어를 입력하지 않으면 터미널을 재시작 하기 전까지는 적용되지 않는다.
 
 ## vim
 
@@ -159,7 +159,7 @@ Vim은 vi와 호환되면서도 독자적으로 다양한 기능을 추가하여
 
 ### install
 
-```zsh
+```bash
 brew install vim
 ```
 
