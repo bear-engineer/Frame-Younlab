@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, Configure, Highlight } from "react-instantsearch-dom";
 import Autocomplete from "./autoSearch";
-require(`dotenv`).config({
-  path: `.env.${process.env.NODE_ENV}`
-});
+
 const searchClient = algoliasearch(
   "6FDIKBQUQF",
   "519d5d010935b6fe7d4bd7abc00ba1e5"
