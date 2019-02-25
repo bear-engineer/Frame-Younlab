@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, Configure, Highlight } from "react-instantsearch-dom";
 import Autocomplete from "./autoSearch";
-
-// const VirtalSearchBox = connectSearchBox(() => null);
-
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`
+});
 const searchClient = algoliasearch(
   "6FDIKBQUQF",
-  "1344e7cfbdc66ff6ff766850de182ed3"
+  process.env.ALGOLIA_SEARCH_ONLY_API_KEY
 );
 
 class Search extends Component {
