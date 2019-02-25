@@ -8,7 +8,7 @@ require(`dotenv`).config({
 });
 const searchClient = algoliasearch(
   "6FDIKBQUQF",
-  process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+  "519d5d010935b6fe7d4bd7abc00ba1e5"
 );
 
 class Search extends Component {
