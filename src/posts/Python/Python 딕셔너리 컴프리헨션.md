@@ -12,7 +12,7 @@ tags: ["til", "python"]
 딕셔너리 컴프리헨션은 리스트 컴프리헨션과 크게 다르지 않다.
 
 ```python
-wort = "letters"
+word = "letters"
 letter_counts = {letter: word.count(letter) for letter in word}
 letter_counts
 {"l":1, "e":2, "t":2, "r":1, "s":1}
