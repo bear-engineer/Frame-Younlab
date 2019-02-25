@@ -5,8 +5,6 @@ description: python 의 list 자료형으로 추가, 삭제, 정렬 방법에 �
 tags: ["til", "python"]
 ---
 
-## 리스트 (List)
-
 ### append
 
 - `append()` 는 리스트의 맨 마지막 항목에 추가한다.
