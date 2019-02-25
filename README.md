@@ -1,5 +1,7 @@
 # My Gatsby blog "Younlab Frame"
 
+![younlab_demo](src/images/younlab_demo.png)
+
 [www.younlab.com](https://younlab.com)
 
 ## 🚀 Quick start
