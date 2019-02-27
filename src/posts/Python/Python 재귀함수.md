@@ -5,6 +5,9 @@ description: python 의 재귀함수를 사용해보자
 tags: ["til", "python"]
 ---
 
+![재귀함수](image/재귀함수.png)
+[출처 :https://codepractice.tistory.com/92](https://codepractice.tistory.com/92)
+
 재귀함수한 함수에서 자기 자신(함수) 를 호출하여 작업을 수행하는 방식을 말한다. 되부름, 재귀호출 이라고도 부른다.
 
 ## 재귀함수의 특징
