@@ -17,11 +17,13 @@ map(function, iterable)
 ### 예시
 
 ```python
-map_list = map(lambda x:x * x, [1, 2, 3, 4, 5]
+print(map(lambda x:x * x, [1, 2, 3, 4, 5]))
+map_list = map(lambda x:x * x, [1, 2, 3, 4, 5])
+print(map_list)
 ```
 
 ```bash
-map_list
+>> <map object at 0x104326b38>
 >> [1, 4, 9, 16, 25]
 ```
 
