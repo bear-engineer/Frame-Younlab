@@ -1,6 +1,6 @@
 ---
 title: "Python map(), filter() 함수"
-date: 2019-02-23
+date: 2019-03-02
 description: python map(), filter() 함수를 알아보았다.
 tags: ["til", "python"]
 ---
