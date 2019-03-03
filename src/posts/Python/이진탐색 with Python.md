@@ -1,7 +1,7 @@
 ---
 title: "이진탐색(Binary Search) with Python"
 date: 2019-03-01
-description: python 의 named tuple 사용법과 특징, 그리고 사용함에 얻는 이점
+description: 이진탐색에 대하여 공부해보았다.
 tags: ["til", "python", "algorithm"]
 ---
 
