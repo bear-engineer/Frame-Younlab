@@ -32,7 +32,7 @@ def selectionSort(arr):
                 minIndex = i
         return minIndex
     """
-    내장함수를 실행하여 최소값 인덱스를 찾고 새로운 배열에 추가하고 원본에 제거
+    내부함수를 실행하여 최소값 인덱스를 찾고 새로운 배열에 추가하고 원본에 제거
     """
     newArr = []
     for i in range(len(arr)):
