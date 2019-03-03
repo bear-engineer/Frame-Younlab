@@ -1,13 +1,11 @@
 ---
 title: "Python 선택정렬"
 date: 2019-03-04
-description: 작은 값과 비교하여 위치를 스왑(swap) 해보자
+description: 정렬 알고리즘의 가장 기본이되는 정렬
 tags: ["til", "python", "algorithm"]
 ---
 
 > 본 문서는 Hello Coding 그림으로 개념을 이해하는 알고리즘 책을 공부하고 정리한 내용입니다.
-
-배열에서 가장 작은 수를 찾아 새로운 배열에 추가 한후 원본에서 제거한다.
 
 ## Big O 성능
 
@@ -16,6 +14,8 @@ tags: ["til", "python", "algorithm"]
 | 공간복잡도 | O(1)        |
 
 ## Case 01: Find Min Number Selection Sort
+
+배열에서 가장 작은 수를 찾아 새로운 배열에 추가 한후 원본에서 제거한다.
 
 ```python
 def selectionSort(arr):
@@ -48,6 +48,8 @@ selectionSort([2,0,6,7,1,3,1])
 ```
 
 ## Case 02: Swap Index Selection Sort
+
+현재의 루프값보다 작은 값과 비교하여 위치를 스왑(swap) 한다.
 
 ```python
 def selectionSort(arr):
