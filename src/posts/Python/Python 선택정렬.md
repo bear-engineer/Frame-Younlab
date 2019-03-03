@@ -9,10 +9,10 @@ tags: ["til", "python", "algorithm"]
 
 ## Big O 성능
 
-| Big O      |
-| ---------- |
+|            | Big O       |
+| ---------- | ----------- |
 | 시간복잡도 | O(n \*\* 2) |
-| 공간복잡도 | O(1) |
+| 공간복잡도 | O(1)        |
 
 ## Case 01: Find Min Number Selection Sort
 
