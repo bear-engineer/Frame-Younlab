@@ -51,7 +51,7 @@ def search(name):
     searched = []
     # search_queue 에 원소가 있으면 반복
     while search_queue:
-        # 스택의 맨 앞 출력 후 제거
+        # 큐의 맨 앞 출력 후 제거
         person = search_queue.popleft()
         # searched 배열에 없으면 실행
         if not person in searched:
