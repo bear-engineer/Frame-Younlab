@@ -104,5 +104,28 @@ def binarySearch(target, arr, start=0, end=None):
     elif arr[mid] > target:
         end = mid - 1
         return binarySearch(target, arr, start, end)
+```
 
+## 하노이의 탑
+
+```python
+def hanoi(disk, start, end):
+    if disk == 0:
+        return
+    if disk:
+        other = 6 - (start + end)
+        hanoi(disk - 1, start, other)
+        print(f'{disk}번 원판을 {start}번 기둥에서 {end}번 기둥으로 이동')
+        hanoi(disk - 1, other, end)
+hanoi(3, 1, 3)
+```
+
+```bash
+1번 원판을 1번 기둥에서 3번 기둥으로 이동
+2번 원판을 1번 기둥에서 2번 기둥으로 이동
+1번 원판을 3번 기둥에서 2번 기둥으로 이동
+3번 원판을 1번 기둥에서 3번 기둥으로 이동
+1번 원판을 2번 기둥에서 1번 기둥으로 이동
+2번 원판을 2번 기둥에서 3번 기둥으로 이동
+1번 원판을 1번 기둥에서 3번 기둥으로 이동
 ```
