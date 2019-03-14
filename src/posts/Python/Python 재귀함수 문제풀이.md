@@ -83,3 +83,26 @@ sub = 재귀 대기 #[2, 3, 4, 5]
     sub = 3 < 5 = return 5
 sub = 2 < 5 = return 5
 ```
+
+## 이진탐색을 재귀적으로 구현해보자
+
+```python
+def binarySearch(target, arr, start=0, end=None):
+    if end == None:
+        end = len(arr) - 1
+    if arr == []:
+        return None
+    if start > end:
+        return None
+
+    mid = (start + end) // 2
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        start = mid + 1
+        return binarySearch(target, arr, start, end)
+    elif arr[mid] > target:
+        end = mid - 1
+        return binarySearch(target, arr, start, end)
+
+```
