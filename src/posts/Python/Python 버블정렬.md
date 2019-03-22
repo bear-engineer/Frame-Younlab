@@ -12,7 +12,7 @@ tags: ["til", "python", "algorithm"]
 | 시간복잡도 | O(n \*\* 2) |
 | 공간복잡도 | O(n)        |
 
-## Case 01: Swap Index Selection Sort
+## Case 01: Swap Index Bubble Sort
 
 현재의 루프값보다 작은 값과 비교하여 위치를 스왑(swap) 한다.
 
